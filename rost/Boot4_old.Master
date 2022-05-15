@@ -1,0 +1,301 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Boot4_old.Master.cs" Inherits="shop_health.Boot4" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Магазин продуктов для здоровья и молодости</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="Images/bibicar-favicon-24.ico" rel="icon" type="image/x-icon" />
+    <link href="Images/bibicar-favicon-24.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/shop_header.css" rel="stylesheet" />
+    <link href="Content/glyphicon.css" rel="stylesheet" />
+    <meta name="description" content="Магазин здоровых продуктов">
+
+    <meta name="yandex-verification" content="8facc88222c4fde3" />
+    <!-- Bootstrap CSS -->
+    <%--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">--%>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/bootstrap.bundle.js"></script>
+
+    <link href="css/jqcart.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/developer/jqcart.js"></script>
+
+
+    <script>
+        $(function () {
+            'use strict';
+            // инициализация плагина
+            $.jqCart({
+                buttons: '.add_item',
+                handler: './Handler1.ashx',
+                cartLabel: '.label-place',
+                visibleLabel: true,
+                openByAdding: false,
+                currency: 'руб.'
+            });
+            // Пример с дополнительными методами
+            $('#open').click(function () {
+                $.jqCart('openCart'); // открыть корзину
+            });
+            $('#clear').click(function () {
+                $.jqCart('clearCart'); // очистить корзину
+            });
+        });
+    </script>
+    <style type="text/css">
+        /* Стили для демо (таблица товаров) */
+        #wrapper {
+            width: 20%;
+            margin: 10px;
+        }
+
+        #label-place {
+            margin: 10px 0;
+        }
+
+        .item_box {
+            border: 1px solid #999;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+            .item_box::after {
+                content: '';
+                display: table;
+                clear: left;
+            }
+
+            .item_box > img {
+                float: left;
+            }
+
+        .shopping_list {
+            width: 50%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+
+            /*.shopping_list td, .shopping_list th {
+                padding: 10px;
+                border: 1px solid #AAAAAA;
+            }*/
+    </style>
+
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <img src="Images/back_logo.png" style="top: -74px; left: -64px; position: absolute; z-index: 0" class="img-fluid" />
+        <img src="Images/slogan.png" style="top: 23px; left: 156px; position: absolute; z-index: 800" class="d-none d-lg-block img-fluid" />
+        <img src="Images/slogan2.png" id="slogan2" style="top: 91px; left: 317px; z-index: 800" class="d-none d-xl-block  img-fluid position-absolute" />
+        <img src="Images/banner_img.png" id="banner_img" style="z-index: 0;" class="d-xl-block d-none offset-0 position-absolute" />
+        <div class="container-fluid">
+            <div class="row" id="header">
+                <div class="col">
+                    <a class="" href="index.aspx">
+                        <img src="Images/logo.png" style="margin-left: 15px; margin-top: 15px; z-index: 1000" class="ml-2 img-fluid" />
+                    </a>
+
+                </div>
+                <div class="col d-none d-sm-block">
+                    <div class="float-right">
+                        <div style="margin-right: 20px; margin-top: 10px; color: #963582; font-weight: bold; font-size: 20px;">Телефон для контактов: +79027957373 <i class="glyphicon glyphicon-phone"></i></div>
+                        <div class="row" id="social_banner">
+                            <div class="col-2">
+                                <a href="https://vk.com/id485607654" target="_top">
+                                    <img src="Images/Icons/icon_vk.png"   /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.instagram.com/healthy_lady_perm/?hl=ru" target="_top">
+                                    <img src="Images/Icons/icon_phone.png"  /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.facebook.com/phlperm/?modal=admin_todo_tour" target="_top">
+                                    <img src="Images/Icons/icon_face.png"  /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://ok.ru/profile/578913501927" target="_top">
+                                    <img src="Images/Icons/icon_ok.png"  /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://mail.ru" target="_top">
+                                    <img src="Images/Icons/icon_mail.png"  /></a>
+                            </div>
+                            <div class="col-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-middle align-content-center align-items-center text-center" style="color: white; background-color: #963582; height: 42px; font-size: 18px;">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <%--<button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id=>
+                            <span class="navbar-toggler-icon"></span>
+                        </button>--%>
+
+                         <div id="button_collapse">
+                            <button  class="navbar-toggler pl-2 pr-2 pt-2 pb-2"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span>МЕНЮ</span>
+                            </button>
+                        </div>
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto ml-0 ml-sm-0 ml-md-3 ml-lg-3 ml-xl-3 ">
+                              
+                                <li class="nav-item">
+                                    <a class="nav-link" href="shop.aspx">МАГАЗИН</a>
+                                </li>
+                             
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Delivery.aspx?id_pages=5">ДОСТАВКА И ОПЛАТА</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="AboutCompany.aspx?id_pages=6">О КОМПАНИИ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="FormCallBack.aspx">ОБРАТНАЯ СВЯЗЬ</a>
+                                </li>
+
+                            </ul>
+                          
+                        </div>
+
+                        <div class="d-none d-xl-block">
+                            <div class="input-group input-group-sm">
+                                <asp:TextBox ID="TextBoxSearch" runat="server" CssClass="form-control"></asp:TextBox>
+                                <div class="input-group-append">
+                                    <asp:LinkButton ID="ButtonSearch" runat="server" CssClass="btn btn-outline-light" OnClick="ButtonSearch_Click">
+                                <i class="glyphicon glyphicon-search"></i>
+                                    </asp:LinkButton>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-none d-lg-block">
+                            <div class="label-place pull-right"></div>
+                        </div>
+                        <div class="d-block d-lg-none"  style="position: absolute; top: -7px; right: 0px;">
+
+                            <div class="label-place pull-right"></div>
+                        </div>
+                       
+
+                    </nav>
+                  
+                </div>
+               
+
+
+            </div>
+            <div class="row">
+            <div class="col-12 d-block d-sm-none pt-2 pb-2" style="color: white; background-color: #963582; font-size: 18px;">
+                <div>
+                    <div class="input-group input-group-sm">
+                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control"></asp:TextBox>
+                        <div class="input-group-append">
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-outline-light" OnClick="ButtonSearch1_Click">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </asp:LinkButton>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <div class="container-fluid d-none d-lg-block" id="bottom_menu2">
+                <div class="row mx-auto align-middle align-content-center align-items-center text-lg-left text-center" style="margin-bottom: 15px;">
+
+                    <div class="col-1 col-sm-12 col-md-2 col-lg-1 col-xl-1 "><a href="Shop.aspx">МАГАЗИН</a></div>
+                    <div class="col-1 col-sm-12 col-md-2 col-lg-1 col-xl-2"><a href="News.aspx?id_pages=5">ОПЛАТА И ДОСТАВКА</a></div>
+                    <div class="col-1 col-sm-12 col-md-2 col-lg-1 col-xl-2"><a href="FormCallBack.aspx">ОБРАТНАЯ СВЯЗЬ</a></div>
+                    <div class="col-1 col-sm-12 col-md-4 col-lg-3 col-xl-2 offset-1" style="color: white;">В СОЦСЕТЯХ</div>
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 d-none d-xl-block" style="color: white;">
+                        <div class="input-group">
+                            <asp:TextBox runat="server" ID="SubScribeText" CssClass="form-control" placeholder="Введите email" />
+                            <div class="input-group-append">
+                                <asp:Button runat="server" ID="SubScribeButt" Text="ПОДПИСАТЬСЯ" CssClass="btn btn-outline-light" OnClick="SubScribeButt_Click" />
+                            </div>
+                        </div>
+                        <asp:Label ID="resSubscribe" runat="server"></asp:Label>
+                    </div>
+                </div>
+               
+                <div class="row mx-auto align-middle align-content-center align-items-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-sm-block " style="color: #e5b3fd;">
+                        Компания Pro Healthy Lady оставляет за собой право вносить изменения в информацию, размещенную на сайте Pro Healthy Lady. Информация, размещенная на сайте не является публичной офертой, определяемой положениями Статьи 437 ГК РФ.
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-none d-xl-block">
+                     
+                        <div class="row" id="social">
+                            <div class="col-2">
+                                <a href="https://vk.com/id485607654" target="_top">
+                                    <img src="Images/Icons/icon_vk.png" /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.instagram.com/healthy_lady_perm/?hl=ru" target="_top">
+                                    <img src="Images/Icons/icon_phone.png" /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://www.facebook.com/phlperm/?modal=admin_todo_tour" target="_top">
+                                    <img src="Images/Icons/icon_face.png" /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://ok.ru/profile/578913501927" target="_top">
+                                    <img src="Images/Icons/icon_ok.png" /></a>
+                            </div>
+                            <div class="col-2">
+                                <a href="https://mail.ru" target="_top">
+                                    <img src="Images/Icons/icon_mail.png" /></a>
+                            </div>
+                            <div class="col-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-fluid" id="bottom_menu3">
+                <div class="row mx-auto align-middle align-content-center align-items-center">
+                    <div class="col-xl-6 col-12">
+                        © 2018–<%= DateTime.Now.Year %> Pro Healthy Lady Все права защищены. Телефон +79027957373
+                    </div>
+                    <div class="col-xl-6 text-right col-12 d-none d-sm-block">
+                        Создание и продвижение сайтов: <a href="mailto:stiv.simil@mail.ru" class="links text-info" target="_blank">radimir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <asp:HiddenField ID="DestCardHidden" runat="server" Value="Список городов" ClientIDMode="Static" />
+
+        <script type="text/javascript">
+            (function (d, t, p) {
+                var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+                j.src = ("https:" == p ? "https:" : "http:") + "//stat.sputnik.ru/cnt.js";
+                var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+            })(document, "script", document.location.protocol);
+    </script>
+    </form>
+</body>
+</html>

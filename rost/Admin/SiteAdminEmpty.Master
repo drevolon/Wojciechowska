@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdminEmpty.Master.cs" Inherits="rost.Admin.SiteAdminEmpty" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+
+    <!-- Bootstrap -->
+    <%-- <link href="../Content/bootstrap.min.css" rel="stylesheet" />--%>
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/glyphicon.css" rel="stylesheet" />
+    <script src="../dist/js/bootstrap.min.js"></script>
+
+    <link href="../Content/SiteAdmin.css" rel="stylesheet" />
+    <link href="../jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%--<script src="../js/bootstrap.min.js"></script>
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>--%>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <title><%: Page.Title %>- Панель администрирования</title>
+
+    <%--<asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />--%>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+</head>
+<body>
+    <form runat="server">
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+        <script src="../dist/js/bootstrap.min.js"></script>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light   bg-secondary">
+            <a class="navbar-brand" href="#">Панель администрирование сайта "РОСТ"</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <%--<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+
+                    <li class="nav-item dropdown">
+                        <asp:DropDownList ID="DropDownListMenuAdmin" runat="server" OnTextChanged="DropDownListMenuAdmin_TextChanged" EnableViewState="true" AppendDataBoundItems="true" DataSourceID="SqlDataSourcePagesMaster" CssClass="form-control" DataTextField="name_pages" DataValueField="id_pages" AutoPostBack="True" OnSelectedIndexChanged="DropDownListMenuAdmin_SelectedIndexChanged">
+                            <asp:ListItem Text="Выбор страницы" Value="-1"></asp:ListItem>
+                        </asp:DropDownList>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Справочники
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="pages.aspx">Страницы меню</a>
+                            <a class="dropdown-item" href="menus.aspx">Меню</a>
+
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin_callback.aspx">Обратная связь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin_faq.aspx">Вопрос-ответ</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Администирование
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <a class="dropdown-item" href="../Account/Register.aspx">Регистрация нового пользователя</a>
+                            <a class="dropdown-item" href="../Account/ManagePassword.aspx">Смена пароля пользователя</a>
+
+                        </div>
+                    </li>
+
+                </ul>
+                 <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" class="btn btn-primary" href="~/Account/Register">Регистрация</a></li>-
+                                <li><a runat="server" class="btn btn-success" href="~/Account/Login">Вход</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" class="text-white" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" CssClass="btn btn-danger" LogoutText="Выход" LogoutPageUrl="~/index.aspx" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+
+
+            </div>--%>
+        </nav>
+
+
+
+
+
+
+
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+        <footer class="footer form-control-static">
+            <div class="container">
+                <p class="text-center">&copy; <%: DateTime.Now.Year %> РОСТ</p>
+            </div>
+        </footer>
+        <asp:SqlDataSource ID="SqlDataSourcePagesMaster" runat="server" ConnectionString="<%$ ConnectionStrings:rostConnectionString %>" SelectCommand="SELECT id_pages, name_pages FROM Pages"></asp:SqlDataSource>
+    </form>
+</body>
+</html>

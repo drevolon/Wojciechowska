@@ -1,0 +1,440 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+body {
+    padding-bottom: 20px;
+    font-family: Roboto-Regular,Arial,Verdana;
+    background: url('../Images/backPrezent5.png') no-repeat;
+    background-position: center top;
+    background-position: 0px -174px;
+}
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    /*padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+
+header {
+    height: 20px;
+    margin:auto;
+   
+}
+
+    header .bg-light {
+        background-color: #0077DC !important;
+    }
+
+    header .navbar-light .navbar-nav a.nav-link {
+        color: rgba(255, 255, 255, 1);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        text-decoration:none;
+    }
+
+    header .navbar-brand {
+
+        padding-top:15px;
+        padding-bottom:15px;
+        color: rgba(255, 255, 255, 1) !important;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+.present_temp {
+    margin-top: 116px;
+}
+
+.present {
+    margin-top: 116px;
+    display: flex;
+    
+}
+    .present .present_img {
+        
+        width: 490px;
+        height: 589px;
+    }
+
+    .present h1 {
+        
+        font-style: normal;
+        font-weight: bold;
+        font-size: 400%;
+        line-height: 56px;
+    }
+
+    .present .present_block
+    {
+        padding:0px 0px 0px 100px;
+    }
+    .present .present_header {
+         text-wrap:none !important;
+         
+    }
+    .present .present_text {
+        margin-top: 70px;
+      
+        font-style: normal;
+        font-weight: normal;
+        font-size: 290%;
+        line-height: 42px;
+        color: #000000;
+    }
+
+    .what_commit {
+        margin-top: 80px;
+    }
+        .what_commit .what_commit_header {
+            font-size: 400%;
+            font-weight: bold;
+            margin-bottom: 52px;
+        }
+    .what_commit .header h2 {
+        text-align: center;
+        font-weight: bold;
+    }
+    .what_commit .text {
+        width: 234px;
+        height: 162px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        text-align: right;
+        letter-spacing: 0.44px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.87);
+    }
+    .what_commit .what_commit_block {
+        
+        width: 445.87px;
+        height: 209px;
+      
+        background: #0077DC;
+        border: 1px solid #0C8B8B;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+        .what_commit .card {
+            background: #0077DC;
+            border: 1px solid #0C8B8B;
+            box-sizing: border-box;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 36px;
+            color:white;
+            height:186px;
+        }
+        .what_commit .card-text {
+            font-size: 29px;
+        }
+        .what_commit .icon {
+            font-size: 280%;
+        }
+
+
+.take_services1 {
+    display: flex;
+    margin-top: 80px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background-color: #D4D4D4;
+}
+    .take_services1 .container-fluid {
+        padding-right: 0px;
+        padding-left: 0px;
+       
+    }
+    .take_services1 .take_services1_block {
+        
+        text-align: center;
+        font-style: normal;
+        font-weight: bold;
+        
+    }
+        .take_services1 .take_services1_block .take_services1_header {
+            font-size: 400%;
+            font-weight: bold;
+        }
+        .take_services1 .take_services1_block .take_services1_text {
+            margin-top: 48px;
+            font-size: 300%;
+            justify-content: space-between;
+        }
+
+   
+
+
+.portfolio {
+    margin-top: 80px;
+}
+
+    .portfolio .portfolio_header {
+        font-size: 400%;
+        font-weight: bold;
+        margin-bottom: 52px;
+    }
+
+    .portfolio .card-header {
+        padding: .5rem 1rem;
+        margin-bottom: 0;
+        background-color: #fff;
+        border-bottom: 0px solid #fff;
+    }
+
+    .portfolio .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 0px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+    }
+
+
+
+.my_job {
+    margin-top: 80px;
+}
+
+    .my_job .my_job_header {
+        font-size: 400%;
+        font-weight: bold;
+        margin-bottom: 52px;
+    }
+
+    .my_job .card-header {
+        padding: .5rem 1rem;
+        margin-bottom: 0;
+        background-color: #fff;
+        border-bottom: 0px solid #fff;
+    }
+    .my_job .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 0px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+    }
+    .my_job .list{
+        line-height:30px;
+        list-style:none;
+        
+    }
+        .my_job .list .list_item {
+            padding-bottom: 10px;
+        }
+
+.take_services2 {
+    margin-top: 80px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    display:flex;
+}
+
+    .take_services2 .container-fluid {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .take_services2 .take_services2_header {
+        font-size: 400%;
+        font-weight: bold;
+        
+    }
+
+    .take_services2 .take_services2_block {
+       
+        background-color: #4F4F4F;
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+    .take_services2 .form-control-lg {
+        padding: 3.0rem 1rem;
+        
+        font-size: 2.3rem;
+        border-radius: 1.3rem;
+    }
+
+    .take_services2 .btn-group-lg > .btn, .btn-lg {
+        padding: 1.2rem 0rem;
+        font-size: 2rem;
+        border-radius: 1.3rem;
+        text-align:center;
+        width:400px;
+    }
+
+.my_clients {
+    margin-top: 80px;
+}
+    .my_clients .my_clients_header {
+        font-size: 400%;
+        font-weight: bold;
+        margin-bottom: 52px;
+    }
+    .my_clients .items_slider
+    {
+        list-style:none;
+    }
+        .my_clients .items_slider .item_slider, .my_clients .card-title {
+            font-size: 2rem;
+        }
+    footer {
+        margin-top: 80px;
+        height: 122px;
+        background-color: #0077DC;
+        padding: 15px 5px;
+    }
+    footer .social {
+        float: right;
+    }
+
+
+@media only screen and (max-width: 1400px) {
+    .present {
+    }
+
+        .present .present_header {
+            font-size: 100%;
+        }
+
+        .present .present_text {
+            font-size: 250%;
+        }
+
+        .present .present_img {
+        }
+
+    .what_commit .icon {
+        font-size: 200%;
+    }
+
+    .what_commit .card-text {
+        font-size: 20px;
+    }
+
+    .what_commit .card {
+        height: 120px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .present {
+        margin-top: 120px;
+    }
+
+        .present .present_header {
+            font-size: 80%;
+        }
+
+        .present .present_text {
+            font-size: 200%;
+            margin-top: 10px;
+        }
+
+    .what_commit .icon {
+        font-size: 200%;
+    }
+    .what_commit .card-text {
+        font-size: 20px;
+    }
+    .what_commit .card {
+       
+        height: 120px;
+    }
+
+    .show {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .present {
+        margin-top: 100px;
+        z-index:-1000;
+    }
+        .present .present_header {
+            font-size: 80%;
+        }
+        .present .present_text {
+            font-size: 200%;
+            margin-top: 10px;
+        }
+        .present .present_img {
+        }
+    .show {
+        display: block !important;
+    }
+    .collapse:not(.show) {
+        display: none;
+    }
+}
+/*Small*/
+@media only screen and (max-width: 767px) {
+    .present {
+        
+        background:none;
+    }
+        .present .present_block {
+            margin-left: 0px;
+            margin-top: 50px;
+            padding: 0px 0px 0px 0px;
+        }
+        .present .present_header {
+            text-wrap:normal;
+            width: 100%;
+        }
+        .present .present_text {
+            margin-top: 70px;
+            width: 100%;
+            height: 100%;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 290%;
+            line-height: 42px;
+            color: #000000;
+        }
+        .present .present_img {
+            width: 100%;
+            height: 100%;
+        }
+    .take_services2 .btn-group-lg > .btn, .btn-lg {
+        padding: 1.4rem 8rem;
+        font-size: 2rem;
+        border-radius: 1.3rem;
+        text-align: center;
+        width: 400px;
+        margin:auto;
+    }
+    .what_commit .icon {
+        display:none;
+    }
+}

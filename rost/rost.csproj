@@ -196,6 +196,8 @@
     <Content Include="Content\bootstrap4-glyphicons-master\bootstrap4-glyphicons\fonts\glyphicons\glyphicons-halflings-regular.svg" />
     <Content Include="Content\bootstrap4-glyphicons-master\bootstrap4-glyphicons\maps\glyphicons-fontawesome.css" />
     <Content Include="Content\bootstrap4-glyphicons-master\bootstrap4-glyphicons\maps\glyphicons-fontawesome.min.css" />
+    <Content Include="Content\SiteV.css" />
+    <Content Include="Default.aspx" />
     <Content Include="descImage.aspx" />
     <Content Include="descText.aspx" />
     <Content Include="Images\audit.png" />
@@ -266,7 +268,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\SiteOld.css" />
     <Content Include="desc.aspx" />
     <Content Include="dist\css\bootstrap-grid.css" />
     <Content Include="dist\css\bootstrap-grid.min.css" />
@@ -333,6 +335,18 @@
     <Content Include="Content\bootstrap4-glyphicons-master\LICENSE" />
     <Content Include="Content\bootstrap4-glyphicons-master\README.md" />
     <Content Include="UC\AboutCompany.ascx" />
+    <Content Include="UC\my_clients_temp.ascx" />
+    <Content Include="UC\OldSite\my_clients_temp.ascx" />
+    <Content Include="UC\OldSite\my_job_temp.ascx" />
+    <Content Include="UC\OldSite\portfolio_temp.ascx" />
+    <Content Include="UC\OldSite\present_temp.ascx" />
+    <Content Include="UC\OldSite\QueryClients.ascx" />
+    <Content Include="UC\OldSite\slider1.ascx" />
+    <Content Include="UC\OldSite\slider2.ascx" />
+    <Content Include="UC\OldSite\slider3.ascx" />
+    <Content Include="UC\OldSite\slider4.ascx" />
+    <Content Include="UC\OldSite\take_services2_temp.ascx" />
+    <Content Include="UC\OldSite\what_commit_temp.ascx" />
     <Content Include="Таблица.Цены4.html" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\background.jpg" />
@@ -505,6 +519,13 @@
     </Compile>
     <Compile Include="Admin\SiteAdminEmpty.Master.designer.cs">
       <DependentUpon>SiteAdminEmpty.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="descImage.aspx.cs">
       <DependentUpon>descImage.aspx</DependentUpon>
@@ -810,6 +831,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="SiteV.Master.cs">
+      <DependentUpon>SiteV.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteV.Master.designer.cs">
+      <DependentUpon>SiteV.Master</DependentUpon>
+    </Compile>
     <Compile Include="UC\callback2.ascx.cs">
       <DependentUpon>callback2.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -866,6 +894,90 @@
     <Compile Include="UC\maps.ascx.designer.cs">
       <DependentUpon>maps.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UC\my_clients_temp.ascx.cs">
+      <DependentUpon>my_clients_temp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\my_clients_temp.ascx.designer.cs">
+      <DependentUpon>my_clients_temp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\my_clients_temp.ascx.cs">
+      <DependentUpon>my_clients_temp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\my_clients_temp.ascx.designer.cs">
+      <DependentUpon>my_clients_temp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\my_job_temp.ascx.cs">
+      <DependentUpon>my_job_temp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\my_job_temp.ascx.designer.cs">
+      <DependentUpon>my_job_temp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\portfolio_temp.ascx.cs">
+      <DependentUpon>portfolio_temp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\portfolio_temp.ascx.designer.cs">
+      <DependentUpon>portfolio_temp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\present_temp.ascx.cs">
+      <DependentUpon>present_temp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\present_temp.ascx.designer.cs">
+      <DependentUpon>present_temp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\QueryClients.ascx.cs">
+      <DependentUpon>QueryClients.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\QueryClients.ascx.designer.cs">
+      <DependentUpon>QueryClients.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\slider1.ascx.cs">
+      <DependentUpon>slider1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\slider1.ascx.designer.cs">
+      <DependentUpon>slider1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\slider2.ascx.cs">
+      <DependentUpon>slider2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\slider2.ascx.designer.cs">
+      <DependentUpon>slider2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\slider3.ascx.cs">
+      <DependentUpon>slider3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\slider3.ascx.designer.cs">
+      <DependentUpon>slider3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\slider4.ascx.cs">
+      <DependentUpon>slider4.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\slider4.ascx.designer.cs">
+      <DependentUpon>slider4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\take_services2_temp.ascx.cs">
+      <DependentUpon>take_services2_temp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\take_services2_temp.ascx.designer.cs">
+      <DependentUpon>take_services2_temp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\OldSite\what_commit_temp.ascx.cs">
+      <DependentUpon>what_commit_temp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\OldSite\what_commit_temp.ascx.designer.cs">
+      <DependentUpon>what_commit_temp.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UC\OneTextBlocks.ascx.cs">
       <DependentUpon>OneTextBlocks.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -918,10 +1030,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="temp\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="SiteV.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

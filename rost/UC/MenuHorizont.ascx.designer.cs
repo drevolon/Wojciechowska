@@ -7,29 +7,20 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace SiteV
+namespace rost.UC
 {
 
 
-    public partial class SiteMaster
+    public partial class MenuHorizont
     {
 
         /// <summary>
-        /// MenuHorizont элемент управления.
+        /// ContextMenu элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::rost.UC.MenuHorizont MenuHorizont;
-
-        /// <summary>
-        /// MainContent элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Literal ContextMenu;
     }
 }

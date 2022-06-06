@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteV.Master.cs" Inherits="SiteV.SiteMaster" %>
+<%@ Register Src="~/UC/MenuHorizont.ascx" TagPrefix="uc1" TagName="MenuHorizont" %>
 
 <!DOCTYPE html>
 
@@ -88,7 +89,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto m-auto mb-2 mb-lg-0">
+<%--                        <ul class="navbar-nav me-auto m-auto mb-2 mb-lg-0">
 
                             <li class="nav-item ml">
                                 <a class="nav-link" href="#present">Обо мне</a>
@@ -99,8 +100,8 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#my_job">Мои возможности</a>
                             </li>
-                        </ul>
-
+                        </ul>--%>
+                        <uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />
                     </div>
                 </div>
             </nav>

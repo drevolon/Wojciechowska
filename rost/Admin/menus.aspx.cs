@@ -18,6 +18,7 @@ namespace rost.Admin
         {
             SqlDataSourcePages.Insert();
             GridView1.DataBind();
+            DDL_items.DataBind();
         }
 
         protected void SqlDataSourcePages_Inserted(object sender, SqlDataSourceStatusEventArgs e)
@@ -32,22 +33,42 @@ namespace rost.Admin
             {
 
                 e.Command.Parameters["@name"].Value = this.TextBoxName_pages.Text;
-                //e.Command.Parameters["@id_pages"].Value = 1;
-                //e.Command.Parameters["@text_pages"].Value = "";//this.TextBoxText_pages.Text;
-                //e.Command.Parameters["@pos_pages"].Value = 0;//this.TextBoxPos_pages.Text;
-                //e.Command.Parameters["@id_pages_type"].Value = 0;// Convert.ToInt16(this.DropDownListPages_type.SelectedValue);
-                //e.Command.Parameters["@menu_number"].Value = 1;
-                //e.Command.Parameters["@pos_pages_under"].Value = 1;
 
+                int id_menu = -1;
+                if (int.TryParse(TextBoxNumber_menu.Text, out id_menu)) e.Command.Parameters["@id_menu"].Value = id_menu;
+                else  e.Command.Parameters["@id_menu"].Value = -1;
 
-                //Server.Transfer("admin_pages.aspx");
+                e.Command.Parameters["@id_parent"].Value = DDL_items.SelectedValue;
+
+                int npp = -1;
+                if (int.TryParse(TextBoxNpp.Text, out npp)) e.Command.Parameters["@npp"].Value = npp;
+                else e.Command.Parameters["@npp"].Value = DBNull.Value;
+
+                e.Command.Parameters["@item_link"].Value = TextBoxLink.Text;
 
             }
             catch 
             {
-                //LabelError.Text = ex.Message;
-                //LabelError.Visible = true;
-                //e.Cancel = true;
+            }
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            if (GridView1.SelectedIndex==e.NewSelectedIndex)
+            {
+                e.Cancel = true;
+                GridView1.SelectedIndex = -1;
+                LabelBoxName_pages.Text = "Наименование пункта меню";
+            }
+            else
+            {
+                GridViewRow gvr = GridView1.Rows[e.NewSelectedIndex];
+                LabelBoxName_pages.Text = "Наименование подпункта в пункт '" + ((Label)gvr.FindControl("Label2")).Text + "' меню ID=" + ((Label)gvr.FindControl("LabelID")).Text;
             }
         }
     }

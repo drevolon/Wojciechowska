@@ -334,6 +334,7 @@
     <Content Include="Content\bootstrap4-glyphicons-master\LICENSE" />
     <Content Include="Content\bootstrap4-glyphicons-master\README.md" />
     <Content Include="UC\AboutCompany.ascx" />
+    <Content Include="UC\MenuFooter.ascx" />
     <Content Include="UC\MenuHorizont.ascx" />
     <Content Include="UC\my_clients_temp.ascx" />
     <Content Include="UC\OldSite\my_clients_temp.ascx" />
@@ -893,6 +894,13 @@
     </Compile>
     <Compile Include="UC\maps.ascx.designer.cs">
       <DependentUpon>maps.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\MenuFooter.ascx.cs">
+      <DependentUpon>MenuFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\MenuFooter.ascx.designer.cs">
+      <DependentUpon>MenuFooter.ascx</DependentUpon>
     </Compile>
     <Compile Include="UC\MenuHorizont.ascx.cs">
       <DependentUpon>MenuHorizont.ascx</DependentUpon>

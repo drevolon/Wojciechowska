@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteV.Master.cs" Inherits="SiteV.SiteMaster" %>
 <%@ Register Src="~/UC/MenuHorizont.ascx" TagPrefix="uc1" TagName="MenuHorizont" %>
+<%@ Register Src="~/UC/MenuFooter.ascx" TagPrefix="uc1" TagName="MenuFooter" %>
 
 <!DOCTYPE html>
 
@@ -110,10 +111,12 @@
 
 
         </header>
+         
         <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
+            <uc1:MenuFooter runat="server" ID="MenuFooter" IdMenu="1" qtyCol="5" />
             <footer>
                 <%-- <p>&copy; <%: DateTime.Now.Year %> - Войцеховская О.С.</p>--%>
                 <%--<img src="Images/temp/footer.jpg" class="img-fluid" />--%>
@@ -122,6 +125,9 @@
 <script async src="https://usocial.pro/usocial/usocial.js?uid=3612ad7ce4f60846&v=6.1.5" data-script="usocial" charset="utf-8"></script>
 <div class="uSocial-Share" data-pid="873d01af8672f9d3e341c31799c8455e" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,upArrow-left,mobile_position_right" data-social="vk,ok,vi,wa,telegram,mail"></div>
 </div><!-- /uSocial -->
+
+                
+
             </footer>
         </div>
 

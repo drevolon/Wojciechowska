@@ -7,11 +7,13 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace rost.UC {
-    
-    
-    public partial class ImageSlider {
-        
+namespace rost.UC
+{
+
+
+    public partial class ImageSlider
+    {
+
         /// <summary>
         /// RepSlider элемент управления.
         /// </summary>
@@ -20,7 +22,7 @@ namespace rost.UC {
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater RepSlider;
-        
+
         /// <summary>
         /// SqlDataSourceBaseText элемент управления.
         /// </summary>

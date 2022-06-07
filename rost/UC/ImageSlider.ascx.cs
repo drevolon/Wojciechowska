@@ -10,7 +10,7 @@ namespace rost.UC
     public partial class ImageSlider : System.Web.UI.UserControl
     {
         protected int _items;
-        public int TypeNews
+        public int idPages
         {
             get { return _items; }
             set { _items = value; }
@@ -20,12 +20,12 @@ namespace rost.UC
         {
             if (!IsPostBack)
             {
-                if (Request["id_pages"] != null && TypeNews == -1)
+                if (Request["id_pages"] != null && idPages == -1)
                 {
-                    TypeNews = Convert.ToInt16(Request["id_pages"].ToString());
+                    idPages = Convert.ToInt16(Request["id_pages"].ToString());
                 }
                 //LHeader.Text = HeaderNews;
-                BindGrid(TypeNews);
+                BindGrid(idPages);
                 //HyperLinkHead.NavigateUrl = "~/News.aspx?id_pages=" + TypeNews;
 
 
@@ -50,8 +50,8 @@ namespace rost.UC
 
             //GridView1.DataSource = data;
             //GridView1.DataBind();
-            RepSlider.DataSource = data;
-            RepSlider.DataBind();
+            //RepSlider.DataSource = data;
+            //RepSlider.DataBind();
         }
 
         protected void RepSlider_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -75,7 +75,7 @@ namespace rost.UC
                     ((Image)e.Item.FindControl("ImageItem")).Visible = true;
                     //                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=" + type_img + "&id=" + id_images;
                     //((Image)e.Row.FindControl("ImageItem")).FullImageURL = "photoDB.ashx?type_img=" + type_img_big + "&items=" + items;
-                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_big&items=" + items + "&w=299&h=168";
+                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_big&items=" + items + "&w=1442&h=508";
                 }
                 else
                 {

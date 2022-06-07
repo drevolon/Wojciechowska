@@ -1,1 +1,1 @@
-﻿<%@ WebHandler Language="C#" CodeBehind="photoDB.ashx.cs" Class="shop_health.photoDB" %>
+﻿<%@ WebHandler Language="C#" CodeBehind="photoDB.ashx.cs" Class="rost.photoDB" %>

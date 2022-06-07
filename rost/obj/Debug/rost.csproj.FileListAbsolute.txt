@@ -241,8 +241,8 @@ D:\projects\Wojciechowska\rost\bin\ru\Microsoft.Owin.Security.Facebook.resources
 D:\projects\Wojciechowska\rost\bin\ru\Microsoft.Owin.Security.Google.resources.dll
 D:\projects\Wojciechowska\rost\bin\ru\Microsoft.Owin.Security.Twitter.resources.dll
 D:\projects\Wojciechowska\rost\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\projects\Wojciechowska\rost\obj\Debug\rost.csprojAssemblyReference.cache
 D:\projects\Wojciechowska\rost\obj\Debug\rost.csproj.CoreCompileInputs.cache
 D:\projects\Wojciechowska\rost\obj\Debug\rost.csproj.CopyComplete
 D:\projects\Wojciechowska\rost\obj\Debug\rost.dll
 D:\projects\Wojciechowska\rost\obj\Debug\rost.pdb
+D:\projects\Wojciechowska\rost\obj\Debug\rost.csproj.AssemblyReference.cache

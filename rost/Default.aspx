@@ -6,6 +6,8 @@
 <%@ Register Src="~/UC/slider3.ascx" TagPrefix="uc1" TagName="slider3" %>
 <%@ Register Src="~/UC/slider4.ascx" TagPrefix="uc1" TagName="slider4" %>
 <%@ Register Src="~/UC/ImageSlider.ascx" TagPrefix="uc1" TagName="ImageSlider" %>
+<%@ Register Src="~/UC/OurProjects.ascx" TagPrefix="uc1" TagName="OurProjects" %>
+<%@ Register Src="~/UC/UniversalTextBlocksNew.ascx" TagPrefix="uc1" TagName="UniversalTextBlocksNew" %>
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
@@ -287,6 +289,7 @@
         </div>
     </section>
 
+    <uc1:UniversalTextBlocksNew runat="server" ID="UniversalTextBlocksNew" CountNews="4" TypeNews="4" />
 
     <uc1:QueryClients runat="server" ID="QueryClients" />
 
@@ -320,7 +323,11 @@
     </section>--%>
 
 
-    <uc1:slider4 runat="server" ID="slider4" />
+    <%--<uc1:slider4 runat="server" ID="slider4" />--%>
 
+        <section class="our_projects">
 
+        <uc1:OurProjects runat="server" ID="OurProjects1" CountNews="3" IdPages="4" />
+
+    </section>
 </asp:Content>

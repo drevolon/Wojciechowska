@@ -24,6 +24,15 @@ namespace rost
         protected global::rost.UC.ImageSlider ImageSlider1;
 
         /// <summary>
+        /// UniversalTextBlocksNew элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::rost.UC.UniversalTextBlocksNew UniversalTextBlocksNew;
+
+        /// <summary>
         /// QueryClients элемент управления.
         /// </summary>
         /// <remarks>
@@ -33,12 +42,12 @@ namespace rost
         protected global::rost.UC.QueryClients QueryClients;
 
         /// <summary>
-        /// slider4 элемент управления.
+        /// OurProjects1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::Войцеховская.UC.slider4 slider4;
+        protected global::rost.UC.OurProjects OurProjects1;
     }
 }

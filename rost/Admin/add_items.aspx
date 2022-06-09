@@ -158,7 +158,7 @@
                             <asp:TemplateField HeaderText="Краткое описание" SortExpression="description_text">
                                 <EditItemTemplate>
                                     <%--<asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("description_text") %>' TextMode="MultiLine" Height="200" ></asp:TextBox>--%>
-                                    <FTB:FreeTextBox ID="FreeTextBoxDescription_text" AllowHtmlMode="true" RenderMode="Plain"  runat="server" Width="100%" Height="500" Text='<%# Bind("description_text") %>'>
+                                    <FTB:FreeTextBox ID="FreeTextBoxDescription_text" runat="server" Width="100%" Height="500" Text='<%# Bind("description_text") %>'>
                                     </FTB:FreeTextBox>
 
                                 </EditItemTemplate>
@@ -170,7 +170,7 @@
                             <asp:TemplateField HeaderText="Полный текст" SortExpression="base_text">
                                 <EditItemTemplate>
                                     <%--<asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("base_text") %>' TextMode="MultiLine" Height="200" CssClass="form-control"></asp:TextBox>--%>
-                                    <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server" AllowHtmlMode="true" RenderMode="Plain" Width="100%" Height="500" Text='<%# Bind("base_text") %>'>
+                                    <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server" Width="100%" Height="500" Text='<%# Bind("base_text") %>'>
                                     </FTB:FreeTextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>

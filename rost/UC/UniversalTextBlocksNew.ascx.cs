@@ -139,7 +139,7 @@ namespace rost.UC
         protected void BindGrid(int type_news)
         {
             object data = null;
-            int current_year = DateTime.Now.Year;
+            //int current_year = DateTime.Now.Year;
             //int begin_year = current_year - 3;
             //int end_year = current_year + 1;
 

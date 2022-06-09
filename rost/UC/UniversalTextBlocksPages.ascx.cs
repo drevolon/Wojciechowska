@@ -228,11 +228,11 @@ namespace rost.UC
             //this.SqlDataSourceBaseText.SelectParameters[0].DefaultValue = "01.01." + begin_year;
             this.SqlDataSourceBaseText.SelectParameters[0].DefaultValue = CountNews.ToString();
             this.SqlDataSourceBaseText.SelectParameters[1].DefaultValue = type_news.ToString();
-            int n = (NumPage - 1) * PagingNews + 1;
-            int m = PagingNews + (NumPage - 1) * PagingNews;
+            //int n = (NumPage - 1) * PagingNews + 1;
+            //int m = PagingNews + (NumPage - 1) * PagingNews;
 
-            this.SqlDataSourceBaseText.SelectParameters[2].DefaultValue = n.ToString();
-            this.SqlDataSourceBaseText.SelectParameters[3].DefaultValue = m.ToString();
+            //this.SqlDataSourceBaseText.SelectParameters[2].DefaultValue = n.ToString();
+            //this.SqlDataSourceBaseText.SelectParameters[3].DefaultValue = m.ToString();
             data = SqlDataSourceBaseText.Select(DataSourceSelectArguments.Empty);
 
             //GridView1.DataSource = data;

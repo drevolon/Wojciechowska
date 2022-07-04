@@ -7,29 +7,47 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace SiteV
+namespace rost
 {
 
 
-    public partial class SiteMaster
+    public partial class Default_old
     {
 
         /// <summary>
-        /// MenuHorizont элемент управления.
+        /// ImageSlider1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::rost.UC.MenuHorizont MenuHorizont;
+        protected global::rost.UC.ImageSlider ImageSlider1;
 
         /// <summary>
-        /// MainContent элемент управления.
+        /// UniversalTextBlocksNew элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::rost.UC.UniversalTextBlocksNew UniversalTextBlocksNew;
+
+        /// <summary>
+        /// QueryClients элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::rost.UC.QueryClients QueryClients;
+
+        /// <summary>
+        /// OurProjects1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::rost.UC.OurProjects OurProjects1;
     }
 }

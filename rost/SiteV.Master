@@ -83,14 +83,60 @@
             </Scripts>
         </asp:ScriptManager>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="banner_top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Войцеховская О.С.</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<%--                        <ul class="navbar-nav me-auto m-auto mb-2 mb-lg-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="Images/temp/temp_banner_top.png" class="banner_img" />
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="banner_menu">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />
+
+                            <%--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown
+                                    </a>
+                                   
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>--%>
+                          
+                        </div>
+                    </div>
+                </nav>
+
+
+
+                <%--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <img src="Images/temp/temp_banner_menu.jpg" />--%>
+
+                        <%--<a class="navbar-brand" href="#"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">--%>
+                            <%--                        <ul class="navbar-nav me-auto m-auto mb-2 mb-lg-0">
 
                             <li class="nav-item ml">
                                 <a class="nav-link" href="#present">Обо мне</a>
@@ -102,10 +148,12 @@
                                 <a class="nav-link" href="#my_job">Мои возможности</a>
                             </li>
                         </ul>--%>
-                        <uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />
+                           <%-- <uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>--%>
+            </div>
+            
 
 
 
@@ -115,16 +163,18 @@
         <div class="body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <uc1:MenuFooter runat="server" ID="MenuFooter" IdMenu="1" qtyCol="5" />
+           <%-- <hr />
+            <uc1:MenuFooter runat="server" ID="MenuFooter" IdMenu="1" qtyCol="5" />--%>
             <footer>
+
                 <%-- <p>&copy; <%: DateTime.Now.Year %> - Войцеховская О.С.</p>--%>
-                <%--<img src="Images/temp/footer.jpg" class="img-fluid" />--%>
+                <img src="Images/temp/temp_footer.jpg" />
+
                  <!-- uSocial -->
-                <div class="social">
+               <%-- <div class="social">
 <script async src="https://usocial.pro/usocial/usocial.js?uid=3612ad7ce4f60846&v=6.1.5" data-script="usocial" charset="utf-8"></script>
 <div class="uSocial-Share" data-pid="873d01af8672f9d3e341c31799c8455e" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,upArrow-left,mobile_position_right" data-social="vk,ok,vi,wa,telegram,mail"></div>
-</div><!-- /uSocial -->
+</div>--%><!-- /uSocial -->
 
                 
 

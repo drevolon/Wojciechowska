@@ -18,39 +18,121 @@
     <section class="present">
         <div class="container-fluid">
             <div class="row">
+                
                 <div class="col-12">
-                   <img src="Images/temp/temp_present_block.png" class="img-responsive" />
-                </div>
-                <%--<div class="col-12">
                     <div class="present_block">
                         
                         <div class="present_header" id="present">
-                            
+                            О компании
                         </div>
                         <div class="present_text">
-                           
+                            Специалисты нашей организации являются экспертами в области <br />
+                            охраны труда и пожарной безопасности.<br /><br />
+ 
+                            Мы работаем в данной сфере с 2009 года, <br />
+                            и за этот период эффективно сотрудничали<br /><br />
+ 
+                            с более 150 организациями. 
                         </div>
                     </div>
-                </div>--%>
-            </div>
-        </div>
-    </section>
-
-    <section class="block2">
-        <div class="container-fluid">
-            <div class="row gx-5">
-                <div class="col-12">
-                    <img src="Images/temp/temp_garant.jpg" />
                 </div>
             </div>
+            <div class="present_img">
+                <img src="Images/present_img.png" />
+            </div>
         </div>
     </section>
 
-     <section class="block3">
+    <section class="garant">
         <div class="container-fluid">
-            <div class="row gx-5">
+            <div class="row">
+                <div class="col-12 text-center garant_header">
+                    Гарантируем
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12">
-                    <img src="Images/temp/temp_get_callback.png" />
+                    <div class="item1">
+                        <div class="d-inline-block">
+                            <img src="Images/present_hand.png" />
+                        </div>
+                        <div class="d-inline-block align-top">
+                            ВЫСОКОЕ<br />
+                            качество<br />
+                            работы<br />
+                        </div>
+                    </div>
+                    <div class="item2">
+                        <div class="d-inline-block">
+                            <img src="Images/present_hand.png" />
+                        </div>
+                        <div class="d-inline-block align-top">
+                            МАКСИМАЛЬНО<br />
+                            БЫСТРО<br />
+                            предварительный <br />
+                            результат<br />
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <div class="d-inline-block">
+                            <img src="Images/present_hand.png" />
+                        </div>
+                        <div class="d-inline-block align-top">
+                           соблюдение<br />
+                           всех сроков<br />
+                        </div>
+                    </div>
+                    <div class="item4">
+                        <div class="d-inline-block">
+                            <img src="Images/present_hand.png" />
+                        </div>
+                        <div class="d-inline-block align-top">
+                            всегда<br />
+                            ОСТАВАТЬСЯ<br />
+                            на связи<br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="garant_arrow">
+                <img src="Images/garant_back_img1.png" />
+            </div>
+            <div class="garant_graph">
+                <img src="Images/garant_back_img2.png" />
+            </div>
+        </div>
+    </section>
+
+      <section class="callback">
+        <div class="container-fluid">
+            <div class="row mt-my1">
+                <div class="col-12 text-center">
+                    <h3>Обратная связь</h3>
+                </div>
+            </div>
+            <div class="container items">
+                <div class="row justify-content-md-center ">
+                    <div class="col col-lg-3">
+                        <label>Имя</label><br />
+                        <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
+                    </div>
+                    <div class="col col-lg-3">
+                        <label>Email/Phone</label><br />
+                        <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
+                    </div>
+                    <div class="col col-lg-2 offset-1 align-text-bottom">
+                        <label></label>
+                        <br />
+                        <div class="input-group input-group-lg">
+                            <asp:HyperLink ID="HyperLink2" runat="server" Text="Отправить" NavigateUrl="#" CssClass="btn btn-secondary btn-lg btnm"></asp:HyperLink>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 justify-content-md-center ">
+                    <div class="col-lg-9">
+                        <label>Обращение</label><br />
+                        <asp:TextBox runat="server" CssClass="form-control form-control-lg" TextMode="MultiLine" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,7 +226,7 @@
         </div>
     </section>
 
-   <section class="block6">
+  <%-- <section class="block6">
         <div class="container-fluid">
             <div class="row gx-5">
                 <div class="col-12">
@@ -152,7 +234,43 @@
                 </div>
             </div>
         </div>
+    </section>--%>
+
+    <section class="reviews_suggestions">
+        <div class="container-fluid">
+            <div class="row mt-my1">
+                <div class="col-12 text-center">
+                    <h3>Отзывы и предложения</h3>
+                </div>
+            </div>
+            <div class="container items">
+                <div class="row justify-content-md-center ">
+                    <div class="col col-lg-3">
+                        <label>Имя</label><br />
+                        <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
+                    </div>
+                    <div class="col col-lg-3">
+                        <label>Email/Phone</label><br />
+                        <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
+                    </div>
+                    <div class="col col-lg-2 offset-1 align-text-bottom">
+                        <label></label>
+                        <br />
+                        <div class="input-group input-group-lg">
+                            <asp:HyperLink ID="HyperLink1" runat="server" Text="Отправить" NavigateUrl="#" CssClass="btn btn-secondary btn-lg btnm"></asp:HyperLink>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 justify-content-md-center ">
+                    <div class="col-lg-9">
+                        <label>Обращение</label><br />
+                        <asp:TextBox runat="server" CssClass="form-control form-control-lg" TextMode="MultiLine" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
 
      <section class="block6">
         <div class="container-fluid">

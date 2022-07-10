@@ -19,7 +19,8 @@
 body {
     /*padding-bottom: 20px;*/
     font-family: Roboto-Regular,Arial,Verdana;
-    background: url('../images/temp/temp_prezent_banner.jpg') no-repeat;
+    background: url('../images/backprezent.jpg') no-repeat;
+    
     background-position: center top;
     /* background-position: 0px -174px;*/
 }
@@ -36,14 +37,14 @@ body {
 input,
 select,
 textarea {
-    max-width: 280px;
+   /* max-width: 280px;*/
 }
 
 
 
 
 header {
-    height:113px;
+    height:958px;
 }
     header .banner_top {
        
@@ -108,11 +109,18 @@ header {
 }
 
 .present {
-    margin-top:115px;
+    
+    
 }
 
     .present .present_img {
-       
+        position: absolute;
+        width: 561px;
+        height: 456px;
+        right: 62px;
+        top: 452px;
+        border: 1px solid #5B3723;
+        border-radius: 77px;
     }
 
     .present h1 {
@@ -120,16 +128,242 @@ header {
     }
 
     .present .present_block {
-        
+        position: absolute;
+        left: 195px;
+        top: 227px;
     }
 
     .present .present_header {
-        
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+        color: #737473;
     }
 
     .present .present_text {
-      
+         margin-top:49px;
+        width: 1540px;
+        height: 311px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 42px;
+        color: #5B3723;
     }
+
+.garant {
+    
+    width: 100%;
+    height: 752px;
+    
+    background: #D9B594;
+}
+
+    .garant .garant_header {
+        margin-top:50px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        color: #5B3723;
+    }
+
+    .garant .garant_arrow {
+        position: absolute;
+        width: 1636px;
+        height: 337.84px;
+        right: 200px;
+        top: 1224px;
+        border: 10px dashed #FFFFFF;
+        opacity: 0.12;
+    }
+
+    .garant .garant_graph {
+        position: absolute;
+        width: 1636px;
+        height: 337.84px;
+        right: 200px;
+        top: 1224px;
+        border: 10px dashed #FFFFFF;
+        opacity: 0.4;
+    }
+    .garant .item1 {
+        position: absolute;
+        width: 270px;
+        height: 162px;
+        left: 231px;
+        top: 1334px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 50px;
+        color: #5B3723;
+    }
+    .garant .item2 {
+        position: absolute;
+        width: 400px;
+        height: 217px;
+        left: 646px;
+        top: 1284px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 50px;
+        color: #5B3723;
+    }
+    .garant .item3 {
+        position: absolute;
+        width: 320px;
+        height: 102px;
+        left: 1145px;
+        top: 1209px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 50px;
+        color: #5B3723;
+    }
+    .garant .item4 {
+        position: absolute;
+        width: 372px;
+        height: 155px;
+        left: 1529px;
+        top: 1088px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 50px;
+        color: #5B3723;
+    }
+
+.callback {
+    background: #73707C;
+    margin-top: 50px;
+    padding: 0px 0px 30px 0px;
+}
+
+    .callback .items {
+        margin-top: 30px;
+    }
+
+    .callback .input-data {
+        margin-top: 26px;
+    }
+
+    .callback h3 {
+        margin-top: 30px;
+        color: #F2EEE9;
+        font-size: 36px;
+    }
+
+    .callback .mt-my1 {
+        margin-top: 33px;
+    }
+
+    .callback .mt-my2 {
+        margin-top: 6px;
+    }
+
+    .callback label {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FFFFFF;
+    }
+
+    .callback .txtb {
+        margin-right: 73px;
+        font-size: 24px !important;
+    }
+
+    .callback .btnm {
+        width: 386px;
+        padding-top: 13px !important;
+        padding-bottom: 13px !important;
+        background: #D65479;
+        border: 1px solid #FFFFFF;
+        border-radius: 15px !important;
+        /***/
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        color: #FFFFFF;
+        bottom: -5px;
+    }
+
+    /*Отзывы и предложения*/
+.reviews_suggestions {
+    background: #D9B594;
+    margin-top: 50px;
+    padding: 0px 0px 30px 0px;
+}
+
+    .reviews_suggestions .items {
+        margin-top: 30px;
+    }
+
+    .reviews_suggestions .input-data {
+        margin-top: 26px;
+    }
+
+    .reviews_suggestions h3 {
+        margin-top: 30px;
+        color: #5B3723;
+        font-size: 36px;
+    }
+
+    .reviews_suggestions .mt-my1 {
+        margin-top: 33px;
+    }
+
+    .reviews_suggestions .mt-my2 {
+        margin-top: 6px;
+    }
+
+    .reviews_suggestions label {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FFFFFF;
+    }
+
+    .reviews_suggestions .txtb {
+        margin-right: 73px;
+        font-size: 24px !important;
+    }
+
+    .reviews_suggestions .btnm {
+        width: 386px;
+        padding-top: 13px !important;
+        padding-bottom: 13px !important;
+        background: #5B3723;
+        border: 1px solid #FFFFFF;
+        border-radius: 15px !important;
+        /***/
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        color: #FFFFFF;
+        bottom: -5px;
+    }
+
+
 
 #navbarSupportedContent {
 }

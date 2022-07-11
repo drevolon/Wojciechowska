@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Boot4.Master" AutoEventWireup="true" CodeBehind="desc.aspx.cs" Inherits="rost.desc" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteV.Master" AutoEventWireup="true" CodeBehind="desc.aspx.cs" Inherits="rost.desc" %>
 
 <%@ Register Assembly="HighslideImage" Namespace="Encosia" TagPrefix="cc1" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <div id="DivFilter" runat="server">
@@ -47,45 +46,22 @@
                     </div>
                 </div>
             </div>
-            <div id="comments">
-                <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-    this.page.url = '<%= HttpContext.Current.Request.Url %>';  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://https-rostot-ru.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-            </div>
         </div>
     </div>
 
-     <asp:SqlDataSource ID="SqlDataSourceBaseText" runat="server" ConnectionString="<%$ ConnectionStrings:rostConnectionString %>"
-                SelectCommand="SELECT BaseText.id_pages, BaseText.header_text, BaseText.description_text, BaseText.base_text, BaseText.date_text, BaseText.items, BaseText.have_img, BaseText.visible_blok, BaseText.id_text, Images.name_images FROM BaseText LEFT OUTER JOIN Images ON BaseText.items = Images.items WHERE (BaseText.id_text = @id_text) ORDER BY BaseText.id_text DESC" ProviderName="<%$ ConnectionStrings:rostConnectionString.ProviderName %>">
-                <SelectParameters>
-                    <asp:QueryStringParameter Name="id_text" QueryStringField="id_text" />
-                </SelectParameters>
-            </asp:SqlDataSource>
-            <asp:SqlDataSource ID="SqlDataSourceImageBase_text" runat="server" ConnectionString="<%$ ConnectionStrings:rostConnectionString %>" SelectCommand="SELECT Images.id_images, Images.id_pages, Images.images, Images.name_images, Images.type_images, Images.size_images, Images.alt_images, ImagesBase_text.items FROM Images INNER JOIN ImagesBase_text ON Images.id_images = ImagesBase_text.id_images WHERE (ImagesBase_text.items = @items)" DeleteCommand="ImagesDelete" DeleteCommandType="StoredProcedure" ProviderName="<%$ ConnectionStrings:rostConnectionString.ProviderName %>">
-                <DeleteParameters>
-                    <asp:Parameter Name="id_images" Type="Int32" />
-                </DeleteParameters>
-                <SelectParameters>
-                    <asp:QueryStringParameter Name="items" QueryStringField="items" />
-                </SelectParameters>
-            </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceBaseText" runat="server" ConnectionString="<%$ ConnectionStrings:rostConnectionString %>"
+        SelectCommand="SELECT BaseText.id_pages, BaseText.header_text, BaseText.description_text, BaseText.base_text, BaseText.date_text, BaseText.items, BaseText.have_img, BaseText.visible_blok, BaseText.id_text, Images.name_images FROM BaseText LEFT OUTER JOIN Images ON BaseText.items = Images.items WHERE (BaseText.id_text = @id_text) ORDER BY BaseText.id_text DESC" ProviderName="<%$ ConnectionStrings:rostConnectionString.ProviderName %>">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="id_text" QueryStringField="id_text" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSourceImageBase_text" runat="server" ConnectionString="<%$ ConnectionStrings:rostConnectionString %>" SelectCommand="SELECT Images.id_images, Images.id_pages, Images.images, Images.name_images, Images.type_images, Images.size_images, Images.alt_images, ImagesBase_text.items FROM Images INNER JOIN ImagesBase_text ON Images.id_images = ImagesBase_text.id_images WHERE (ImagesBase_text.items = @items)" DeleteCommand="ImagesDelete" DeleteCommandType="StoredProcedure" ProviderName="<%$ ConnectionStrings:rostConnectionString.ProviderName %>">
+        <DeleteParameters>
+            <asp:Parameter Name="id_images" Type="Int32" />
+        </DeleteParameters>
+        <SelectParameters>
+            <asp:QueryStringParameter Name="items" QueryStringField="items" />
+        </SelectParameters>
+    </asp:SqlDataSource>
 
 </asp:Content>

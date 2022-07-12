@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteV.Master" AutoEventWireup="true" CodeBehind="desc.aspx.cs" Inherits="rost.desc" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteV_page.Master" AutoEventWireup="true" CodeBehind="desc.aspx.cs" Inherits="rost.desc" %>
 
 <%@ Register Assembly="HighslideImage" Namespace="Encosia" TagPrefix="cc1" %>
 

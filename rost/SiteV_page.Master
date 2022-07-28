@@ -58,13 +58,25 @@
             </Scripts>
         </asp:ScriptManager>
         <header_page>
-            <div class="banner_top">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="Images/temp/temp_banner_top.png" class="banner_img" />
-                        </div>
+             <div class="banner_top">
+                <div class="logo">
+                    <div class="content">
+                        <a href="default.aspx"><img src="Images/logo.png"  style="border:0px;" /></a>
                         
+                    </div>
+                </div>
+                <div class="name_org">
+                    <div class="content">ИП Войцеховская</div>
+                </div>
+                <div class="phone">
+                    <div class="content">
+                        <i class="fa fa-phone-square"></i> 8-992-305-89-23 <br />
+                           <i class="fa fa-phone-square"></i> 8(3452)92-39-65
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="content">
+                        <i class="fa fa-envelope"></i> olgad0@yandex.ru
                     </div>
                 </div>
             </div>

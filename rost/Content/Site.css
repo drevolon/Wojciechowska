@@ -113,10 +113,10 @@ h3 {
         height: 70px;*/
             /* left: 0px;*/
             /* top: 113px;*/
-            width: 100%;
+            /*width: 100%;
             padding-top: 2px;
             padding-bottom: 2px;
-            background-color: #5B3723 !important;
+            background-color: #5B3723 !important;*/
         }
 
         header .banner_menu .bg-light {
@@ -211,7 +211,6 @@ h3 {
 .garant {
     position: relative;
     
-    width: 100%;
     height: 752px;
     background: #D9B594;
 }
@@ -468,97 +467,158 @@ footer {
         color: #FFFFFF;
     }
 
-@media only screen and (max-width: 1400px) {
-    .present {
+
+@media only screen and (max-width: 1800px) {
+
+    .garant .item1 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 36px;
     }
 
-        .present .present_header {
-        }
-
-        .present .present_text {
-        }
-
-        .present .present_img {
-        }
-
-    .what_commit .icon {
+    .garant .item2 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 36px;
     }
 
-    .what_commit .card-text {
+    .garant .item3 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 36px;
     }
 
-    .what_commit .card {
+    .garant .item4 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 30px;
+        line-height: 36px;
     }
+}
+
+
+@media only screen and (max-width: 1500px) {
+
+
+    .present .present_img {
+        display: none !important;
+    }
+    
+   
 }
 
 @media only screen and (max-width: 1200px) {
-    .present {
-    }
-
-        .present .present_header {
-        }
-
-        .present .present_text {
-        }
-
-    .what_commit .icon {
-    }
-
-    .what_commit .card-text {
-    }
-
-    .what_commit .card {
-    }
-
-    .show {
-        display: block !important;
-    }
+    
 }
 
-@media only screen and (max-width: 900px) {
-    .present {
+@media only screen and (max-width: 980px) {
+
+    .banner_top .name_org {
+        font-size: 24px;
+        line-height: 24px;
     }
 
-        .present .present_header {
-        }
-
-        .present .present_text {
-        }
-
-        .present .present_img {
-        }
-
-    .show {
-        display: block !important;
+    .banner_top .phone {
+       
+        font-size: 16px;
+        line-height: 16px;
+        
     }
 
-    .collapse:not(.show) {
-        display: none;
+    .banner_top .email {
+       
+        font-size: 16px;
+        line-height: 16px;
+        
+    }
+
+
+    .garant .item1 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
+    }
+
+    .garant .item2 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
+    }
+
+    .garant .item3 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
+    }
+
+    .garant .item4 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
     }
 }
 /*Small*/
 @media only screen and (max-width: 767px) {
-    .present {
-        background: none;
+
+    .banner_top .phone {
+        display: none !important;
     }
 
-        .present .present_block {
-        }
-
-        .present .present_header {
-        }
-
-        .present .present_text {
-        }
-
-        .present .present_img {
-        }
-
-    .take_services2 .btn-group-lg > .btn, .btn-lg {
+    .banner_top .email {
+        display: none !important;
     }
 
-    .what_commit .icon {
-        display: none;
+ .garant {
+        height: 525px;
+    }
+    .garant .item1 {
+        margin-top:30px;
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
+    }
+
+    .garant .item2 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
+    }
+
+    .garant .item3 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
+    }
+
+    .garant .item4 {
+        position: inherit;
+        margin-bottom: 20px;
+        font-size: 24px !important;
+        line-height: 25px;
+    }
+    .garant .garant_graph {
+        display: none !important;
+    }
+    .garant .garant_arrow {
+        display: none !important;
+    }
+
+    .present .present_text {
+        margin-left: 80px;
+        font-size: 24px;
+        line-height: 34px;
+        color: #5B3723;
+        z-index: 1000;
     }
 }
 

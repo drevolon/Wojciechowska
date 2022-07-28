@@ -17,14 +17,64 @@
 
 
 body {
-    font-family: Roboto-Regular,Arial,Verdana;
+    font-family: Roboto,Roboto-Regular,Arial,Verdana;
     background: url('../images/backprezent.jpg') no-repeat;
     background-position: center top;
 }
+
+.banner_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 30px;
+    align-items: center;
+}
+
+    .banner_top .logo, .name_org, .phone, .email {
+    }
+
+    .banner_top .logo {
+    }
+
+    .banner_top .name_org {
+        margin-left: 30px;
+        justify-self: flex-start;
+        justify-content: flex-start;
+        flex: 1 1 auto;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        color: #5B3723;
+    }
+
+    .banner_top .phone {
+        align-self: flex-start;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #737473;
+    }
+
+    .banner_top .email {
+        align-self: flex-start;
+        margin-left: 30px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #737473;
+    }
+
+    .banner_top .content {
+        /* flex: 1 1 100px;
+        padding: 0px 0px 0px 0px;*/
+    }
+
+
 header_page .banner_top {
-    margin-top: 23px;
+  /*  margin-top: 23px;
     margin-bottom: 23px;
-    margin-left: 36px;
+    margin-left: 36px;*/
 }
 header_page .banner_menu .bg-light {
     background-color: #5B3723 !important;
@@ -142,8 +192,25 @@ footer {
     
 }
 
-@media only screen and (max-width: 900px) {
-    
+@media only screen and (max-width: 980px) {
+
+    .banner_top .name_org {
+        flex: 0 1 auto;
+        flex-wrap:wrap;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+
+    .banner_top .phone {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .banner_top .email {
+        font-size: 16px;
+        line-height: 16px;
+    }
 }
 /*Small*/
 @media only screen and (max-width: 767px) {

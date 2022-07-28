@@ -43,8 +43,8 @@
                     </div>
                 </div>
             </div>
-            <div class="present_img">
-                <img src="Images/present_img.png" />
+            <div class="present_img d-none d-md-block">
+                <img src="Images/present_img.png" class="img-fluid img-responsive" />
             </div>
         </div>
     </section>

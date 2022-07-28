@@ -15,6 +15,15 @@ namespace SiteV
     {
 
         /// <summary>
+        /// MenuHorizont элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::rost.UC.MenuHorizont MenuHorizont;
+
+        /// <summary>
         /// MainContent элемент управления.
         /// </summary>
         /// <remarks>

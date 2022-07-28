@@ -89,7 +89,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <%--<uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />--%>
+                            <uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />
 
                             <%--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">

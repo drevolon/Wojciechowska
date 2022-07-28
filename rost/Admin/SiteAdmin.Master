@@ -53,7 +53,7 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-light   bg-secondary">
-            <a class="navbar-brand" href="#">Панель администрирование сайта "РОСТ"</a>
+            <a class="navbar-brand" href="#">Панель администрирование</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -133,7 +133,7 @@
 
         <footer class="footer form-control-static">
             <div class="container">
-                <p class="text-center">&copy; <%: DateTime.Now.Year %> РОСТ</p>
+                <p class="text-center">&copy; <%: DateTime.Now.Year %> Панель администрирования.</p>
             </div>
         </footer>
         <asp:SqlDataSource ID="SqlDataSourcePagesMaster" runat="server" ConnectionString="<%$ ConnectionStrings:rostConnectionString %>" SelectCommand="SELECT id_pages, name_pages FROM Pages"></asp:SqlDataSource>

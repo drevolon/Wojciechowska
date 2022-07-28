@@ -17,14 +17,19 @@
 
     <section class="present">
         <div class="container-fluid">
-            <div class="row">
+             <div class="row">
+                <div class="col-12 text-center header">
+                    <h3>О компании</h3>
+                </div>
+            </div>
+
+
+            <div class="row items">
                 
                 <div class="col-12">
                     <div class="present_block">
                         
-                        <div class="present_header" id="present">
-                            О компании
-                        </div>
+                       
                         <div class="present_text">
                             Специалисты нашей организации являются экспертами в области <br />
                             охраны труда и пожарной безопасности.<br /><br />
@@ -33,7 +38,7 @@
                             Мы работаем в данной сфере с 2009 года, <br />
                             и за этот период эффективно сотрудничали<br /><br />
  
-                            с более 150 организациями. 
+                            <b>с более 150 организациями.</b> 
                         </div>
                     </div>
                 </div>
@@ -47,8 +52,8 @@
     <section class="garant">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 text-center garant_header">
-                    Гарантируем
+                <div class="col-12 text-center header">
+                    <h3>Гарантируем</h3>
                 </div>
             </div>
             <div class="row">
@@ -106,31 +111,36 @@
 
       <section class="callback">
         <div class="container-fluid">
-            <div class="row mt-my1">
+            <div class="row header">
                 <div class="col-12 text-center">
                     <h3>Обратная связь</h3>
                 </div>
             </div>
             <div class="container items">
-                <div class="row justify-content-md-center ">
-                    <div class="col col-lg-3">
+                <div class="row">
+                    <div class="col col-lg-3 left">
                         <label>Имя</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
                     </div>
-                    <div class="col col-lg-3">
+                    <div class="col col-lg-4">
                         <label>Email/Phone</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
                     </div>
-                    <div class="col col-lg-2 offset-1 align-text-bottom">
-                        <label></label>
-                        <br />
-                        <div class="input-group input-group-lg">
-                            <asp:HyperLink ID="HyperLink2" runat="server" Text="Отправить" NavigateUrl="#" CssClass="btn btn-secondary btn-lg btnm"></asp:HyperLink>
+                    <div class="col col-lg-5 d-flex justify-content-end align-items-end ">
+                        
+                            
+                        <div class="">
+                            <asp:LinkButton Text="text" runat="server" CssClass="btn btn-secondary btnm ">
+                            <i class="fa fa-paper-plane"></i> ОТПРАВИТЬ
+                            </asp:LinkButton>
                         </div>
+                            
+
+
                     </div>
                 </div>
-                <div class="row mt-2 justify-content-md-center ">
-                    <div class="col-lg-9">
+                <div class="row mt-2">
+                    <div class="col-lg-12">
                         <label>Обращение</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg" TextMode="MultiLine" />
                     </div>
@@ -139,26 +149,46 @@
         </div>
     </section>
 
-   <section class="block4">
+   <section class="discount">
         <div class="container-fluid">
-            <div class="row gx-5">
-                <div class="col-12">
-                    <img src="Images/temp/temp_discount.png" />
+             <div class="row header">
+                <div class="col-12 text-center">
+                    <h3>Акции и специальные предложения</h3>
                 </div>
             </div>
+            <div class="row items">
+                <div class="col-lg-3">
+                    <div class="discount_img">
+                        <img src="Images/Award.png" class="img-fluid img-responsive" />
+                    </div>
+                </div>
+                <div class="col-lg-9 text-center d-flex align-content-between flex-wrap justify-content-center">
+                    <div class="discount_text">
+                    Только сегодня и только сейчас подготовим для вас пакет<br />
+                        документов<br />
+                    по охране труда  и  промышленной безопасности по цене <br />
+                        <font size="65">в два раза ниже рыночной !</font>
+                    </div>
+                    <div class="m-auto">
+                        <asp:LinkButton Text="text" runat="server" CssClass="  btn btn-secondary btnm">
+                            <i class="fa fa-check-circle"></i> ПРИНЯТЬ УЧАСТИЕ
+                        </asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
-     <section class="block5">
+     <section class="our_clients">
         <div class="container-fluid">
-              <div class="row">
-                <div class="col-12 text-center mt-5 mb-5">
-                    <h1>Наши клиенты</h1>
+              <div class="row header">
+                <div class="col-12 text-center">
+                    <h3>Наши клиенты</h3>
                 </div>
             </div>
-            <div class="row gx-5 mt-5">
+            <div class="row items">
                 <div class="col-12">
-                   <%-- <img src="Images/temp/temp_our_clients.png" />--%>
 
                     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -227,26 +257,18 @@
         </div>
     </section>
 
-  <%-- <section class="block6">
-        <div class="container-fluid">
-            <div class="row gx-5">
-                <div class="col-12">
-                    <img src="Images/temp/temp_reviews.png" />
-                </div>
-            </div>
-        </div>
-    </section>--%>
+
 
     <section class="reviews_suggestions">
         <div class="container-fluid">
-            <div class="row mt-my1">
+            <div class="row header">
                 <div class="col-12 text-center">
                     <h3>Отзывы и предложения</h3>
                 </div>
             </div>
             <div class="container items">
                 <div class="row justify-content-md-center ">
-                    <div class="col col-lg-3">
+                    <div class="col col-lg-2">
                         <label>Имя</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
                     </div>
@@ -254,16 +276,16 @@
                         <label>Email/Phone</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
                     </div>
-                    <div class="col col-lg-2 offset-1 align-text-bottom">
-                        <label></label>
-                        <br />
-                        <div class="input-group input-group-lg">
-                            <asp:HyperLink ID="HyperLink1" runat="server" Text="Отправить" NavigateUrl="#" CssClass="btn btn-secondary btn-lg btnm"></asp:HyperLink>
-                        </div>
+                    <div class="col col-lg-7 d-flex justify-content-end align-items-end">
+                       
+                            <asp:LinkButton Text="text" runat="server" CssClass="btn btn-secondary btnm">
+                            <i class="fa fa-paper-plane"></i> ОТПРАВИТЬ
+                            </asp:LinkButton>
+
                     </div>
                 </div>
                 <div class="row mt-2 justify-content-md-center ">
-                    <div class="col-lg-9">
+                    <div class="col-lg-12">
                         <label>Обращение</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg" TextMode="MultiLine" />
                     </div>
@@ -277,7 +299,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 text-center mt-5 mb-5">
-                    <h1>Как нас найти</h1>
+                    <h3>Как нас найти</h3>
                 </div>
             </div>
             <div class="row gx-5">

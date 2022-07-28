@@ -7,25 +7,27 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace rost {
-    
-    
-    public partial class SiteMaster {
-        
+namespace rost
+{
+
+
+    public partial class SiteMaster
+    {
+
         /// <summary>
         /// ContentPlaceHead элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHead;
-        
+
         /// <summary>
         /// MainContent элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;

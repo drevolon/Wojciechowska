@@ -12,7 +12,7 @@
     
 
     <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
+       <%-- <%: Scripts.Render("~/bundles/modernizr") %>--%>
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
@@ -25,8 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link href="Content/bootstrap502/css/bootstrap.min.css" rel="stylesheet" />
     <link href="fontawesome/css/all.css" rel="stylesheet" />
 
 
@@ -34,34 +33,11 @@
 </head>
 <body>
 
-   <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(85609375, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/85609375" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
+ 
 
     <form runat="server">
 
-        <!-- Optional JavaScript; choose one of the two! -->
-
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+        
 
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -84,12 +60,23 @@
         </asp:ScriptManager>
         <header>
             <div class="banner_top">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <img src="Images/temp/temp_banner_top.png" class="banner_img" />
-                        </div>
-                        
+                <div class="logo">
+                    <div class="content">
+                        <img src="Images/logo.png" />
+                    </div>
+                </div>
+                <div class="name_org">
+                    <div class="content">ИП Войцеховская</div>
+                </div>
+                <div class="phone">
+                    <div class="content">
+                        <i class="fa fa-phone-square"></i> 8-992-305-89-23 <br />
+                           <i class="fa fa-phone-square"></i> 8(3452)92-39-65
+                    </div>
+                </div>
+                <div class="email">
+                    <div class="content">
+                        <i class="fa fa-envelope"></i> olgad0@yandex.ru
                     </div>
                 </div>
             </div>
@@ -102,7 +89,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />
+                            <%--<uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />--%>
 
                             <%--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
@@ -167,14 +154,16 @@
             <uc1:MenuFooter runat="server" ID="MenuFooter" IdMenu="1" qtyCol="5" />--%>
             <footer>
 
-                <%-- <p>&copy; <%: DateTime.Now.Year %> - Войцеховская О.С.</p>--%>
-                <img src="Images/temp/temp_footer.jpg" />
-
-                 <!-- uSocial -->
-               <%-- <div class="social">
-<script async src="https://usocial.pro/usocial/usocial.js?uid=3612ad7ce4f60846&v=6.1.5" data-script="usocial" charset="utf-8"></script>
-<div class="uSocial-Share" data-pid="873d01af8672f9d3e341c31799c8455e" data-type="share" data-options="round-rect,style1,default,absolute,horizontal,size48,eachCounter0,counter0,upArrow-left,mobile_position_right" data-social="vk,ok,vi,wa,telegram,mail"></div>
-</div>--%><!-- /uSocial -->
+         <div class="container-fluid">
+                    <div class="row text-center ">
+                        <div class="col-lg-12 m-auto base_text">
+                            &copy; <%: DateTime.Now.Year %> - ИП Войцеховская оставляет за собой право вносить изменения в информацию, 
+размещенную данном на сайте. Информация, размещенная на сайте не является публичной офертой, 
+определяемой положениями Статьи 437 ГК РФ.
+                        
+                        </div>
+                    </div>
+                </div>
 
                 
 

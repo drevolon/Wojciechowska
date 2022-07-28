@@ -18,9 +18,8 @@
 
 body {
     /*padding-bottom: 20px;*/
-    font-family: Roboto-Regular,Arial,Verdana;
+    font-family: Roboto, Roboto-Regular,Arial,Verdana;
     background: url('../images/backprezent.jpg') no-repeat;
-    
     background-position: center top;
     /* background-position: 0px -174px;*/
 }
@@ -42,79 +41,67 @@ textarea {
 
 
 
-header_page {
-    height: 958px;
+h3 {
+    font-family: 'Roboto' !important;
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 40px !important;
 }
-
-    header_page .banner_top {
-        margin-top: 23px;
-        margin-bottom: 23px;
-        margin-left: 36px;
+.banner_top {
+    display: flex;
+    justify-content:space-between;
+    padding: 24px 30px;
+    align-items:center;
+}
+    .banner_top .logo,.name_org,.phone,.email {
+        
     }
+    .banner_top .logo {
 
-        header_page .banner_top .banner_img {
-            width: 100%;
-        }
-
-    header_page .banner_menu {
-        /*position: absolute;*/
-        /*width: 1920px;
-        height: 70px;*/
-        /* left: 0px;*/
-        /* top: 113px;*/
-        width: 100%;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        background-color: #5B3723 !important;
     }
+    .banner_top .name_org {
+        margin-left: 30px;
+        justify-self: flex-start;
+        justify-content: flex-start;
 
-        header_page .banner_menu .bg-light {
-            background-color: #5B3723 !important;
-        }
+        flex: 1 1 auto;
 
-        header_page .banner_menu .nav-item {
-            padding-right: 30px;
-        }
-
-
-    header_page .navbar-light .navbar-nav a.nav-link {
-        color: #ffffff;
-        text-decoration: none;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        color: #5B3723;
     }
-
-    header_page navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-        color: #D9B594 !important;
-    }
-
-    header_page .dropdown-menu {
-        background-color: #D9B344;
-    }
-
-        header_page .dropdown-menu .dropdown-item {
-            color: #5B3723 !important;
-        }
-
-    header_page .navbar-brand {
-        /* padding-top:15px;
-        padding-bottom:15px;
-        color: rgba(255, 255, 255, 1) !important;
+    .banner_top .phone {
+        align-self: flex-start;
+       
         font-style: normal;
-        font-weight: normal;
+        font-weight: 700;
         font-size: 24px;
-        text-decoration: none;*/
+        line-height: 28px;
+        color: #737473;
+    }
+    .banner_top .email {
+        align-self: flex-start;
+        margin-left: 30px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: #737473;
+    }
+    .banner_top .content{
+       /* flex: 1 1 100px;
+        padding: 0px 0px 0px 0px;*/
     }
 
-
-
-
-header {
-    height:958px;
-}
+    header {
+        /*height:958px;*/
+    }
     header .banner_top {
        
-       margin-top:23px;
+       /*margin-top:23px;
        margin-bottom:23px;
-       margin-left:36px;
+       margin-left:36px;*/
        
     }
         header .banner_top .banner_img {
@@ -168,99 +155,91 @@ header {
         text-decoration: none;*/
     }
 
-.present_temp {
-    
-}
 
 .present {
-    
-    
+    position: relative;
 }
-
-    .present .present_img {
-        position: absolute;
-        width: 561px;
-        height: 456px;
-        right: 62px;
-        top: 452px;
-        border: 1px solid #5B3723;
-        border-radius: 77px;
-    }
-
-    .present h1 {
-        
-    }
-
-    .present .present_block {
-        position: absolute;
-        left: 195px;
-        top: 227px;
-    }
-
-    .present .present_header {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 56px;
+    .present .header {
         text-align: center;
         color: #737473;
+        margin-top:50px;
+    }
+
+    .present .items {
+        margin-top: 30px;
+        margin-bottom: 337px;
     }
 
     .present .present_text {
-         margin-top:49px;
-        width: 1540px;
-        height: 311px;
+        /* width: 1158px;
+        height: 311px;*/
+
+        margin-left:80px;
+
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-size: 36px;
         line-height: 42px;
         color: #5B3723;
+        z-index: 1000;
     }
 
+    .present .present_img {
+        position: absolute;
+        width: 561px;
+        height: 456px;
+        right: 80px;
+        top: 239px;
+        border: 1px solid #5B3723;
+        border-radius: 77px;
+        z-index: 500;
+    }
+
+   
+
+    .present .present_block {
+        /*position: absolute;
+        left: 195px;
+        top: 227px;*/
+    }
+
+
+
+
+
 .garant {
+    position: relative;
     
     width: 100%;
     height: 752px;
-    
     background: #D9B594;
 }
 
-    .garant .garant_header {
-        margin-top:50px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 40px;
+    .garant .header {
+        margin-top: 30px;
         color: #5B3723;
     }
 
     .garant .garant_arrow {
         position: absolute;
-        width: 1636px;
-        height: 337.84px;
         right: 200px;
-        top: 1224px;
-        border: 10px dashed #FFFFFF;
-        opacity: 0.12;
+        bottom: 100px;
+        opacity: 0.6;
     }
 
     .garant .garant_graph {
         position: absolute;
-        width: 1636px;
-        height: 337.84px;
-        right: 200px;
-        top: 1224px;
-        border: 10px dashed #FFFFFF;
-        opacity: 0.4;
+      
+        right: 73px;
+        bottom:50px;
+        
+        opacity: 0.8;
     }
     .garant .item1 {
         position: absolute;
-        width: 270px;
-        height: 162px;
-        left: 231px;
-        top: 1334px;
+        left: 80px;
+        bottom: 214px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -270,10 +249,8 @@ header {
     }
     .garant .item2 {
         position: absolute;
-        width: 400px;
-        height: 217px;
-        left: 646px;
-        top: 1284px;
+        left: 528px;
+        bottom: 209px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -283,10 +260,8 @@ header {
     }
     .garant .item3 {
         position: absolute;
-        width: 320px;
-        height: 102px;
-        left: 1145px;
-        top: 1209px;
+        left: 1143px;
+        bottom: 399px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -296,16 +271,26 @@ header {
     }
     .garant .item4 {
         position: absolute;
-        width: 372px;
-        height: 155px;
-        left: 1529px;
-        top: 1088px;
+        right: 80px;
+        bottom: 476px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
         font-size: 36px;
         line-height: 50px;
         color: #5B3723;
+    }
+
+.our_clients
+{
+
+}
+    .our_clients .header {
+        margin-top: 50px;
+    }
+
+    .our_clients .items {
+        margin-top: 30px;
     }
 
 .callback {
@@ -325,10 +310,10 @@ header {
     .callback h3 {
         margin-top: 30px;
         color: #F2EEE9;
-        font-size: 36px;
+        
     }
 
-    .callback .mt-my1 {
+    .callback .header {
         margin-top: 33px;
     }
 
@@ -351,20 +336,58 @@ header {
     }
 
     .callback .btnm {
-        width: 386px;
-        padding-top: 13px !important;
-        padding-bottom: 13px !important;
-        background: #D65479;
-        border: 1px solid #FFFFFF;
-        border-radius: 15px !important;
-        /***/
-
-        font-family: 'Roboto';
-        font-style: normal;
+        padding: 8px 30px 8px 30px;
+        background: #A57665;
+        border: 1px solid #5B3723;
+        border-radius: 15px;
+        /**/
         font-weight: 500;
         font-size: 24px;
+    }
+
+
+.discount {
+    
+    position:relative;
+    margin-top: 50px;
+    /*padding: 0px 0px 30px 0px;*/
+}
+    .discount .header {
+        
+    }
+    .discount .items {
+        margin-top: 30px;
+        padding: 50px 80px;
+        background: #D9B344;
+    }
+    .discount .discount_text {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 140%;
+        letter-spacing: 0.25px;
         color: #FFFFFF;
-        bottom: -5px;
+    }
+
+    .discount .btnm {
+        
+        padding:8px 30px 8px 30px;
+        background: #A57665;
+        border: 1px solid #5B3723;
+        border-radius: 15px;
+        /**/
+        font-weight: 500;
+        font-size: 24px;
+        
+    }
+
+
+    .discount .discount_img {
+        /*position: absolute;
+        width: 430px;
+        height: 411px;
+        left: 80px;
+        top: 30px;*/
     }
 
     /*Отзывы и предложения*/
@@ -388,8 +411,8 @@ header {
         font-size: 36px;
     }
 
-    .reviews_suggestions .mt-my1 {
-        margin-top: 33px;
+    .reviews_suggestions .header {
+       
     }
 
     .reviews_suggestions .mt-my2 {
@@ -411,23 +434,27 @@ header {
     }
 
     .reviews_suggestions .btnm {
-        width: 386px;
-        padding-top: 13px !important;
-        padding-bottom: 13px !important;
-        background: #5B3723;
-        border: 1px solid #FFFFFF;
-        border-radius: 15px !important;
-        /***/
-
-        font-family: 'Roboto';
-        font-style: normal;
+        padding: 8px 30px 8px 30px;
+        background: #A57665;
+        border: 1px solid #5B3723;
+        border-radius: 15px;
+        /**/
         font-weight: 500;
         font-size: 24px;
-        color: #FFFFFF;
-        bottom: -5px;
+        
     }
 
+footer {
+    padding: 19px;
+    background: #A57665;
+}
 
+    footer .base_text {
+        width: 1174px;
+        font-size: 16px;
+        color: #FFFFFF;
+        line-height: 28px;
+    }
 
 #navbarSupportedContent {
 }

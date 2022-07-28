@@ -126,7 +126,7 @@
                         <label>Email/Phone</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
                     </div>
-                    <div class="col col-lg-5 d-flex justify-content-end align-items-end ">
+                    <div class="col col-lg-5 d-flex justify-content-end align-items-end btnmc">
                         
                             
                         <div class="">
@@ -194,16 +194,16 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4 overflow-auto">
                                         
                                         <img src="Images/Slider/client1.png" class="d-block w-100 overflow-auto" height="289" alt="..." />
                                        
                                     </div>
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client2.png" class="d-block w-100 overflow-auto" height="289" alt="..." />
                                        
                                     </div>
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client3.png" class="d-block w-100 overflow-auto" height="289" alt="..." />
                                        
                                     </div>
@@ -211,15 +211,15 @@
                             </div>
                             <div class="carousel-item">
                                  <div class="row">
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client2.png" class="d-block w-100" height="289" alt="..." />
                                         
                                     </div>
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client3.png" class="d-block w-100" height="289" alt="..." />
                                        
                                     </div>
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client1.png" class="d-block w-100" height="289" alt="..." />
                                        
                                     </div>
@@ -227,15 +227,15 @@
                             </div>
                             <div class="carousel-item">
                                   <div class="row">
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client3.png" class="d-block w-100" height="289" alt="..." />
                                        
                                     </div>
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client1.png" class="d-block w-100" height="289" alt="..." />
                                        
                                     </div>
-                                    <div class="col-4 overflow-auto">
+                                    <div class="col-12 col-md-4  overflow-auto">
                                         <img src="Images/Slider/client2.png" class="d-block w-100" height="289" alt="..." />
                                        
                                     </div>
@@ -276,7 +276,7 @@
                         <label>Email/Phone</label><br />
                         <asp:TextBox runat="server" CssClass="form-control form-control-lg txtb" />
                     </div>
-                    <div class="col col-lg-7 d-flex justify-content-end align-items-end">
+                    <div class="col col-lg-7 d-flex justify-content-end align-items-end btnmc">
                        
                             <asp:LinkButton Text="text" runat="server" CssClass="btn btn-secondary btnm">
                             <i class="fa fa-paper-plane"></i> ОТПРАВИТЬ

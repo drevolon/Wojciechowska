@@ -20,11 +20,11 @@
                     <div class="row items">
                         <div class="col-lg-12">
                             <div class="row">
-                                <div class="col-sm-3 col-lg-3 col-xl-2 offset-2 g-0">
+                                <div class="col-12 col-sm-3 col-lg-3 col-xl-2  offset-lg-2 g-0">
                                     <!--<img src="Images/DirectorNoPhone.png" />-->
                                     <img src="Images/Employees/Director.jpg" class="img-thumbnail" />
                                 </div>
-                                <div class="col-sm-7 col-lg-7 col-xl-8 d-flex justify-content-center">
+                                <div class="col-12 col-sm-7 col-lg-7 col-xl-8 d-flex justify-content-center">
                                     <table class="table-secondary">
 
                                         <tbody>

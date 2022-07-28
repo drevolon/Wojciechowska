@@ -33,6 +33,8 @@
 
     <link href="Content/SitePages.css" rel="stylesheet" />
 
+    <script src="Content/bootstrap502/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 

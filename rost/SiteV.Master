@@ -28,7 +28,7 @@
     <link href="Content/bootstrap502/css/bootstrap.min.css" rel="stylesheet" />
     <link href="fontawesome/css/all.css" rel="stylesheet" />
 
-
+    <script src="Content/bootstrap502/js/bootstrap.min.js"></script>
 
 </head>
 <body>

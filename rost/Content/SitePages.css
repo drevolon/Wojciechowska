@@ -214,7 +214,44 @@ footer {
 }
 /*Small*/
 @media only screen and (max-width: 767px) {
-    
+    .audit .experience {
+        margin-top: 30px;
+        margin-left:0px;
+    }
+        .audit .experience .base_text {
+            margin-bottom: 30px;
+            margin-left: 0px;
+        }
+
+
+    .audit .right_col {
+        padding: 21px 18px;
+    }
+
+    .audit .right_col img {
+        margin-top: 30px;
+        
+    }
+
+    .audit .left_col .items {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .callback .btnmc {
+        padding: 15px 30px 8px 30px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .reviews_suggestions .btnmc {
+        padding: 15px 30px 8px 30px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
 }
 
 

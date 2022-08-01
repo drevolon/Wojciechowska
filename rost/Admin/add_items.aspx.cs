@@ -1,14 +1,49 @@
-﻿using rost.App_Code;
+﻿
+using rost.App_Code;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Text.RegularExpressions;
-using System.Web;
-using System.Web.UI;
+using System.Web.Script.Serialization;
 using System.Web.UI.WebControls;
+
 
 namespace rost.Admin
 {
+    public class JsonProps
+    {
+        public List<JProp> Property { get; set; }
+        public JsonProps()
+        {
+            Property = new List<JProp>();
+        }
+    }
+
+    public class JProp
+    {
+        public string name { get; set; }
+        public string value { get; set; }
+    }
+
+
+    public class JsonImages
+    {
+        public List<JImg> Images { get; set; }
+        public JsonImages()
+        {
+            Images = new List<JImg>();
+        }
+    }
+
+    public class JImg
+    {
+        public string name { get; set; }
+        public string items { get; set; }
+    }
+
+
     public partial class add_items : System.Web.UI.Page
     {
 
@@ -19,6 +54,17 @@ namespace rost.Admin
         public String type_images;
         public int size_images;
         public String items;
+        public string property;
+        public string images_add;
+        DataTable dt;
+
+
+        protected void  CreateDT()
+        {
+            dt = new DataTable();
+            dt.Columns.Add(new DataColumn("FileName", typeof(String)));
+            dt.Columns.Add(new DataColumn("item", typeof(String)));
+        }
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -52,18 +98,51 @@ namespace rost.Admin
                 {
                     ((System.Web.UI.WebControls.Image)e.Row.FindControl("ImageCatalog")).Visible = false;
                 }
-                string user_name = User.Identity.Name;
-                //if (Context.User.Identity.GetUserName() == "") Response.Redirect("Account/Login?ReturnUrl=%2FAdmin%2Fadd_items");
-                //if (!User.Identity.IsAuthenticated)
-                //{
-                    //BaseText.Visible = false;
-                    //LabelHeader.Text = LabelHeader.Text + " доступ ограничен!";
-                //}
-                //break;
+
+                GridView panProp = (GridView)(e.Row.FindControl("GridPropsList"));
+
+                string DopProps = ((Label)(e.Row.FindControl("LabelProps"))).Text;
+                if (DopProps != string.Empty)
+                {
+                    JsonProps ListProps = (new JavaScriptSerializer()).Deserialize<JsonProps>(DopProps);
+                    panProp.DataSource = ListProps.Property;
+                    panProp.DataBind();
+                }
+
+                GridView panDoc = (GridView)(e.Row.FindControl("GridDocsList"));
+                string DopDocs = ((Label)(e.Row.FindControl("LabelDocs"))).Text;
+                if (DopDocs != string.Empty)
+                {
+                    JsonImages ListDocs = (new JavaScriptSerializer()).Deserialize<JsonImages>(DopDocs);
+                    panDoc.DataSource = ListDocs.Images;
+                    panDoc.DataBind();
+                }
+
 
             }
             if ((e.Row.RowState & DataControlRowState.Edit) == DataControlRowState.Edit)
             {
+                GridView GridProps = (GridView)e.Row.FindControl("GridPropsEdit");
+                if (GridProps != null)
+                {
+                    string jsonString = ((Label)e.Row.FindControl("LabelPropsEdit")).Text;
+                    JsonProps ListProps = (new JavaScriptSerializer()).Deserialize<JsonProps>(jsonString);
+                    GridProps.DataSource = ListProps.Property;
+                    GridProps.DataBind();
+                }
+                GridView panDoc = (GridView)(e.Row.FindControl("GridDocsEdit"));
+                string DopDocs = ((Label)(e.Row.FindControl("LabelDocsEdit"))).Text;
+                if (DopDocs != string.Empty)
+                {
+                    JsonImages ListDocs = (new JavaScriptSerializer()).Deserialize<JsonImages>(DopDocs);
+                    JImg jimg = new JImg();
+                    jimg.name = string.Empty;
+                    jimg.items = string.Empty;
+                    ListDocs.Images.Add(jimg);
+                    panDoc.DataSource = ListDocs.Images;
+                    panDoc.DataBind();
+                }
+
 
             }
         }
@@ -78,8 +157,6 @@ namespace rost.Admin
             //Подгрузка изображения
 
             FileUpload FileUploadImg = (FileUpload)GridView1.Rows[e.RowIndex].FindControl("FileUploadImg");
-            //String temp = ((Label)(GridView1.Rows[e.RowIndex].FindControl("LabelFileNames"))).Text;
-            //CheckBox checkFileDelete = ((CheckBox)(GridView1.Rows[e.RowIndex].FindControl("CheckBoxFileDelete")));
 
             String items = ((Label)(GridView1.Rows[e.RowIndex].FindControl("LabelEditItems"))).Text;
             String alt_images = "";
@@ -112,6 +189,54 @@ namespace rost.Admin
                 e.NewValues.Add("have_img", true);
                 have_img = "true";
             }
+            GridViewRow GV = ((GridView)sender).Rows[((GridView)sender).EditIndex];
+
+            GridView GridProps = (GridView)GV.FindControl("GridPropsEdit");
+            GridView GridDocs = (GridView)GV.FindControl("GridDocsEdit");
+
+            JsonProps jsp = new JsonProps();
+
+            GridViewRowCollection Rs = GridProps.Rows;
+            foreach (GridViewRow R in Rs)
+            {
+                JProp pp = new JProp();
+                string name = ((TextBox)R.FindControl("LabelNameEdit")).Text;
+                string value = ((TextBox)R.FindControl("TextValueEdit")).Text;
+                pp.name = name;
+                pp.value = value;
+                jsp.Property.Add(pp);
+            }
+
+            property = (new JavaScriptSerializer()).Serialize(jsp);
+
+            JsonImages jimg = new JsonImages();
+
+            GridViewRowCollection FRs = GridDocs.Rows;
+            foreach (GridViewRow FR in FRs)
+            {
+                JImg pp = new JImg();
+                string name = ((TextBox)FR.FindControl("TextNameDoc")).Text;
+                string fitems = ((Label)FR.FindControl("TextItems")).Text;
+                FileUpload FU = (FileUpload)FR.FindControl("FUpdateUpload");
+                CheckBox delDoc = (CheckBox)FR.FindControl("DelDoc");
+                if (!delDoc.Checked)
+                {
+                    pp.name = name;
+                    pp.items = fitems;
+                    if (FU.HasFile) pp.items = UploadFileToDB(FU, id_pages);
+                    if (pp.items != string.Empty)
+                    {
+                        jimg.Images.Add(pp);
+                    }
+                }
+            }
+            images_add = (new JavaScriptSerializer()).Serialize(jimg);
+            e.OldValues.Remove("property"); e.NewValues.Remove("property");
+            e.OldValues.Remove("images_add"); e.NewValues.Remove("images_add");
+            e.NewValues.Add("property", property);
+            e.NewValues.Add("images_add", images_add);
+
+
         }
 
         protected void SqlDataSourceImagesBase_text_Inserting(object sender, SqlDataSourceCommandEventArgs e)
@@ -147,31 +272,152 @@ namespace rost.Admin
             }
         }
 
+        protected void LinkButtonQtyFiles_Click(object sender, EventArgs e)
+        {
+            int qtyFiles = 0;
+            if (!int.TryParse(TextBoxQtyFiles.Text, out qtyFiles)) return;
+            int AddDel = dt.Rows.Count - qtyFiles;
+            if (AddDel>0)
+            {
+                for (int i=qtyFiles+AddDel-1; i>=qtyFiles;i--)
+                {
+                    dt.Rows.RemoveAt(i);
+                }
+            }
+            if (AddDel < 0)
+            {
+                AddDel = Math.Abs(AddDel);
+                for (int i = 0; i < AddDel; i++)
+                {
+                    dt.Rows.Add();
+                }
+            }
+
+            ViewState["ListFiles"] = dt;
+            GridViewFiles.DataSource = dt;
+            GridViewFiles.DataBind();
+
+
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 if (Request["id_pages"] != null)
                 {
+                    string id_pages = Request["id_pages"].ToString();
+
                     LabelHeaderPage.Text = Request["name_pages"].ToString();
+
+                    string jsonString = string.Empty;
+                    //@"{Property:[{""name"":""имя1"",""value"":""данные1""},{""name"":""имя2"",""value"":""данные2""},{""name"":""имя3"",""value"":""данные3""}]}";
+                    string props = string.Empty;
+
+                    using (SqlConnection sqc = new SqlConnection(ConfigurationManager.ConnectionStrings["rostConnectionString"].ToString()))
+                    {
+                        sqc.Open();
+                        SqlCommand cmd = new SqlCommand("select text_pages from pages where id=" + id_pages,sqc);
+                        props = cmd.ExecuteScalar()?.ToString() ?? string.Empty;
+                        sqc.Close();
+                    }
+                    JsonProps ListProps = new JsonProps();
+                    string[] aProps = props.Split(';');
+                    foreach (string p in aProps)
+                    {
+                        JProp jp = new JProp();
+                        jp.name = p.Trim();
+                        jp.value = string.Empty;
+                        ListProps.Property.Add(jp);
+                    }
+                    //JsonProps ListProps = (new JavaScriptSerializer()).Deserialize<JsonProps>(jsonString);
+
+                    GridProps.DataSource = ListProps.Property;
+                    GridProps.DataBind();
+
                 }
+
+                CreateDT();
+                ViewState["ListFiles"] = dt;
+                TextBoxQtyFiles.Text = "0";
+            }
+            else
+            {
+                dt = (DataTable)ViewState["ListFiles"];
+                GridViewFiles.DataSource = dt;
+                GridViewFiles.DataBind();
             }
 
-            //RegisterHyperLink.NavigateUrl = "RegisterMed";
-            // Включите, когда будет включено подтверждение учетной записи для функции сброса пароля
-            //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            //OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            //var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            //if (!String.IsNullOrEmpty(returnUrl))
-            //{
-                //RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            //}
+        }
+        
+        protected string UploadFileToDB(FileUpload fUploadImg, int id_pages)
+        {
+
+            string fitems = string.Empty;
+            int size_images = fUploadImg.PostedFile.ContentLength;
+
+            if (fUploadImg.HasFile)
+            {
+                if (fitems == string.Empty) fitems = Guid.NewGuid().ToString();
+
+                string type_images = fUploadImg.PostedFile.ContentType;
+                byte[] fimages = new byte[size_images];
+                fUploadImg.PostedFile.InputStream.Read(fimages, 0, size_images);
+                int indexOfSlash = fUploadImg.PostedFile.FileName.LastIndexOf("\\") + 1;
+                string name_images = fUploadImg.PostedFile.FileName.Substring(indexOfSlash);
+                Images objImg = new Images();
+
+                objImg.ImagesUpdate
+                    (
+                        fitems,
+                        id_pages,
+                        fimages,
+                        name_images,
+                        type_images,
+                        size_images,
+                        ""
+                    );
+
+            }
+            return fitems;
         }
 
         protected void LinkButtonInsert_Click(object sender, EventArgs e)
         {
-            have_img = false;
+
+            //OnInserting="SqlDataSourceBaseText_Inserting"
             int id_pages = Convert.ToInt16(Request["id_pages"].ToString());
+
+
+            JsonProps jsp = new JsonProps();
+
+            GridViewRowCollection Rs = GridProps.Rows;
+            foreach (GridViewRow R in Rs)
+            {
+                JProp pp = new JProp();
+                string name = ((Label)R.FindControl("LabelName")).Text;
+                string value = ((TextBox)R.FindControl("TextValue")).Text;
+                pp.name = name;
+                pp.value = value;
+                jsp.Property.Add(pp);
+            }
+
+            property = (new JavaScriptSerializer()).Serialize(jsp);
+
+            JsonImages jimg = new JsonImages();
+
+            GridViewRowCollection FRs = GridViewFiles.Rows;
+            foreach (GridViewRow FR in FRs)
+            {
+                JImg pp = new JImg();
+                string name = ((TextBox)FR.FindControl("TextFileName")).Text;
+                FileUpload FU = (FileUpload)FR.FindControl("FInsertUpload");
+                pp.name = name;
+                pp.items = UploadFileToDB(FU,id_pages);
+                jimg.Images.Add(pp);
+            }
+            images_add = (new JavaScriptSerializer()).Serialize(jimg);
+
             string alt_images = "";
             items = Guid.NewGuid().ToString();
 
@@ -210,6 +456,7 @@ namespace rost.Admin
 
         protected void SqlDataSourceBaseText_Inserting(object sender, SqlDataSourceCommandEventArgs e)
         {
+
             int iNpp = 0;
             try
             {
@@ -233,6 +480,8 @@ namespace rost.Admin
                 e.Command.Parameters["@have_img"].Value = have_img;
                 e.Command.Parameters["@visible_blok"].Value = true;
                 e.Command.Parameters["@npp"].Value = iNpp;
+                e.Command.Parameters["@property"].Value = property;
+                e.Command.Parameters["@images_add"].Value = images_add;
             }
             catch
             {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Admin/SiteAdmin.Master" MaintainScrollPositionOnPostback="true" CodeBehind="add_items.aspx.cs" ValidateRequest="false" Inherits="rost.Admin.add_items" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Admin/SiteAdmin.Master" MaintainScrollPositionOnPostback="true" EnableViewState="true" CodeBehind="add_items.aspx.cs" Inherits="rost.Admin.add_items" %>
 
 <%@ MasterType VirtualPath="~/Admin/SiteAdmin.Master" %>
 
@@ -89,6 +89,52 @@
                     </div>
 
                 </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+
+                    <asp:GridView ID="GridProps" AutoGenerateColumns="False" ShowHeader="false" runat="server">
+                        <Columns>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Label runat="server" ID="LabelName" Text='<%# Bind("name") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:TextBox runat="server" ID="TextValue" Text='<%# Bind("value") %>' placeholder="Введите значение"></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </div>
+                <div class="col-lg-5 col-md-5">
+                    <div class="form-group">
+                        <label for="TextBoxQtyFiles">Количество образов документов:</label>
+                        <div class="col-lg-2 col-md-2">
+                            <asp:TextBox ID="TextBoxQtyFiles" runat="server" CssClass="form-control" placeholder="Введите количество"></asp:TextBox>
+                        </div>
+                        <div class="col-lg-2 col-md-2">
+                            <asp:LinkButton ID="LinkButtonQtyFiles" runat="server" CssClass="btn btn-primary" OnClick="LinkButtonQtyFiles_Click" Text="Применить"></asp:LinkButton>
+                        </div>
+                        <label for="TextBoxHeader_text">Список загружаемых образов документов</label>
+                        <asp:GridView ID="GridViewFiles" AutoGenerateColumns="False" ShowHeader="false" runat="server">
+                            <Columns>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:TextBox runat="server" ID="TextFileName" Text='<%# Bind("FileName") %>' placeholder="Введите наименование файла"></asp:TextBox>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:FileUpload ID="FInsertUpload" runat="server" />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <hr />
@@ -139,7 +185,7 @@
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Сорт." SortExpression="npp">
                                 <EditItemTemplate>
-                                    <asp:TextBox ID="TextBox_npp" runat="server" Text='<%# Bind("npp") %>' CssClass="form-control" ></asp:TextBox>
+                                    <asp:TextBox ID="TextBox_npp" runat="server" Text='<%# Bind("npp") %>' CssClass="form-control"></asp:TextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
                                     <asp:Label ID="LabelNpp" runat="server" Text='<%# Bind("npp") %>'></asp:Label>
@@ -170,7 +216,7 @@
                             <asp:TemplateField HeaderText="Полный текст" SortExpression="base_text">
                                 <EditItemTemplate>
                                     <%--<asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("base_text") %>' TextMode="MultiLine" Height="200" CssClass="form-control"></asp:TextBox>--%>
-                                    <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server" Width="100%" Height="500" Text='<%# Bind("base_text") %>'>
+                                    <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server" Width="100%" Height="500" Text='<%# Bind("base_text") %>' AllowHtmlMode="true">
                                     </FTB:FreeTextBox>
                                 </EditItemTemplate>
                                 <ItemTemplate>
@@ -216,6 +262,94 @@
                                 <ItemStyle Width="50px"></ItemStyle>
                             </asp:CheckBoxField>
                             <asp:BoundField DataField="id_text" HeaderText="ID" SortExpression="id_text" Visible="true" ReadOnly="True" InsertVisible="False" />
+                            <asp:TemplateField HeaderText="Доп. параметры">
+                                <EditItemTemplate>
+                                    <asp:Label ID="LabelPropsEdit" runat="server" Text='<%# Bind("property") %>' Visible="false"></asp:Label>
+                                    <asp:GridView ID="GridPropsEdit" AutoGenerateColumns="False" ShowHeader="false" runat="server">
+                                        <Columns>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:TextBox runat="server" ID="LabelNameEdit" Text='<%# Bind("name") %>'></asp:TextBox>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:TextBox runat="server" ID="TextValueEdit" Text='<%# Bind("value") %>'></asp:TextBox>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="LabelProps" runat="server" Text='<%# Bind("property") %>' Visible="false"></asp:Label>
+                                    <asp:GridView ID="GridPropsList" AutoGenerateColumns="False" ShowHeader="false" runat="server">
+                                        <Columns>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="LabelNameList" Text='<%# Bind("name") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="TextValueList" Text='<%# Bind("value") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Доп. документы">
+                                <ItemTemplate>
+                                    <asp:Label ID="LabelDocs" runat="server" Text='<%# Bind("images_add") %>' Visible="false"></asp:Label>
+                                    <asp:GridView ID="GridDocsList" AutoGenerateColumns="False" ShowHeader="false" runat="server">
+                                        <Columns>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="LabelNameDoc" Text='<%# Bind("name") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:Image ID="ImageDoc" ImageUrl='<%# "./../photoDB.ashx?type_img=image_low&items="+Eval("items") +"&w=70&h=70" %>' Height="50px" runat="server" />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+
+                                </ItemTemplate>
+                                <EditItemTemplate>
+                                    <asp:Label ID="LabelDocsEdit" runat="server" Text='<%# Bind("images_add") %>' Visible="false"></asp:Label>
+                                    <asp:GridView ID="GridDocsEdit" AutoGenerateColumns="False" ShowHeader="false" runat="server">
+                                        <Columns>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:TextBox runat="server" ID="TextNameDoc" Text='<%# Bind("name") %>'></asp:TextBox>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField Visible="false">
+                                                <ItemTemplate>
+                                                    <asp:Label runat="server" ID="TextItems" Text='<%# Eval("items") %>'></asp:Label>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:Image ID="ImageDoc" ImageUrl='<%# "./../photoDB.ashx?type_img=image_low&items="+Eval("items") +"&w=70&h=70" %>' Height="50px" runat="server" Visible='<%# Eval("items").ToString()!="" %>' />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:CheckBox ID="DelDoc" runat="server" Text="Удалить скан" Visible='<%# Eval("items").ToString()!="" %>'/>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                            <asp:TemplateField>
+                                                <ItemTemplate>
+                                                    <asp:FileUpload ID="FUpdateUpload" runat="server" />
+                                                </ItemTemplate>
+                                            </asp:TemplateField>
+                                        </Columns>
+                                    </asp:GridView>
+                                </EditItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                 </div>
@@ -230,8 +364,11 @@
 
 
     <asp:SqlDataSource ID="SqlDataSourceBaseText" runat="server" ConnectionString="<%$ ConnectionStrings:rostConnectionString %>"
-        SelectCommand="SELECT BaseText.id_pages, BaseText.header_text, BaseText.description_text, BaseText.base_text, BaseText.date_text, BaseText.items, BaseText.have_img, BaseText.visible_blok, BaseText.id_text, BaseText.npp, Images.name_images FROM BaseText LEFT OUTER JOIN Images ON BaseText.items = Images.items WHERE (BaseText.id_pages = @id_pages) ORDER BY BaseText.npp, BaseText.id_text DESC"
-        InsertCommand="INSERT INTO BaseText(id_pages, description_text, header_text, base_text, date_text, items, have_img, visible_blok, npp) VALUES (@id_pages, @description_text, @header_text, @base_text, @date_text, @items, @have_img, @visible_blok, @npp)" OnInserting="SqlDataSourceBaseText_Inserting" DeleteCommand="BaseTextDelete" DeleteCommandType="StoredProcedure" UpdateCommand="BaseTextUpdate" UpdateCommandType="StoredProcedure">
+        SelectCommand="SELECT BaseText.id_pages, BaseText.header_text, BaseText.description_text, BaseText.base_text, BaseText.date_text, BaseText.items, BaseText.have_img, BaseText.visible_blok, BaseText.id_text, BaseText.npp, BaseText.property, BaseText.images_add, Images.name_images FROM BaseText LEFT OUTER JOIN Images ON BaseText.items = Images.items WHERE (BaseText.id_pages = @id_pages) ORDER BY BaseText.npp, BaseText.id_text DESC"
+        InsertCommand="INSERT INTO BaseText(id_pages, description_text, header_text, base_text, date_text, items, have_img, visible_blok, npp, property, images_add) VALUES (@id_pages, @description_text, @header_text, @base_text, @date_text, @items, @have_img, @visible_blok, @npp, @property, @images_add)"
+        OnInserting="SqlDataSourceBaseText_Inserting"
+        DeleteCommand="BaseTextDelete" DeleteCommandType="StoredProcedure"
+        UpdateCommand="Update BaseText set header_text=@header_text, description_text=@description_text, base_text=@base_text, have_img=@have_img,visible_blok=@visible_blok, npp=@npp, property=@property, images_add=@images_add where id_text=@id_text ">
         <DeleteParameters>
             <asp:Parameter Name="id_text" Type="Int32" />
             <asp:Parameter Name="items" Type="String" />
@@ -246,6 +383,8 @@
             <asp:Parameter Name="have_img" />
             <asp:Parameter Name="visible_blok" />
             <asp:Parameter Name="npp" />
+            <asp:Parameter Name="property" />
+            <asp:Parameter Name="images_add" />
         </InsertParameters>
         <SelectParameters>
             <asp:QueryStringParameter Name="id_pages" QueryStringField="id_pages" />
@@ -259,6 +398,8 @@
             <asp:Parameter Name="have_img" Type="Boolean" />
             <asp:Parameter Name="visible_blok" Type="Boolean" />
             <asp:Parameter Name="npp" Type="Int32" />
+            <asp:Parameter Name="property" Type="String" />
+            <asp:Parameter Name="images_add" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
 

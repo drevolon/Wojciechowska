@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Admin/SiteAdmin.Master" MaintainScrollPositionOnPostback="true" EnableViewState="true" CodeBehind="add_items.aspx.cs" Inherits="rost.Admin.add_items" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Admin/SiteAdmin.Master" MaintainScrollPositionOnPostback="true" EnableViewState="true" CodeBehind="add_items.aspx.cs" ValidateRequest="false" Inherits="rost.Admin.add_items" %>
 
 <%@ MasterType VirtualPath="~/Admin/SiteAdmin.Master" %>
 

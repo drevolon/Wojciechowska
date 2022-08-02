@@ -8,7 +8,7 @@
 <%@ Register Src="~/UC/ImageSlider.ascx" TagPrefix="uc1" TagName="ImageSlider" %>
 <%@ Register Src="~/UC/OurProjects.ascx" TagPrefix="uc1" TagName="OurProjects" %>
 <%@ Register Src="~/UC/UniversalTextBlocksNew.ascx" TagPrefix="uc1" TagName="UniversalTextBlocksNew" %>
-
+<%@ Register Src="~/UC/DynamicSlider.ascx" TagPrefix="uc1" TagName="DynamicSlider" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -200,7 +200,7 @@
             <div class="row items">
                 <div class="col-12">
 
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<%--                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
@@ -261,6 +261,9 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
+--%>
+
+                <uc1:DynamicSlider runat="server" ID="DynSlider" IdPages="1"  CountNews="3"/>
 
                 </div>
             </div>

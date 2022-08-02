@@ -2048,6 +2048,7 @@
     <Content Include="UC\OldSite\slider4.ascx" />
     <Content Include="UC\OldSite\take_services2_temp.ascx" />
     <Content Include="UC\OldSite\what_commit_temp.ascx" />
+    <Content Include="UC\DynamicSlider.ascx" />
     <Content Include="UC\OurProjects.ascx" />
     <Content Include="Таблица.Цены4.html" />
     <Content Include="Content\bootstrap502\css\bootstrap-grid.css.map" />
@@ -2770,6 +2771,13 @@
     </Compile>
     <Compile Include="UC\OneTextBlocks.ascx.designer.cs">
       <DependentUpon>OneTextBlocks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\DynamicSlider.ascx.cs">
+      <DependentUpon>DynamicSlider.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\DynamicSlider.ascx.designer.cs">
+      <DependentUpon>DynamicSlider.ascx</DependentUpon>
     </Compile>
     <Compile Include="UC\OurProjects.ascx.cs">
       <DependentUpon>OurProjects.ascx</DependentUpon>

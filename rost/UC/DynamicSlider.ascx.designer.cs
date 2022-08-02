@@ -7,66 +7,12 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace rost
+namespace rost.UC
 {
 
 
-    public partial class Default
+    public partial class DynamicSlider
     {
-
-        /// <summary>
-        /// upd1 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upd1;
-
-        /// <summary>
-        /// Sender элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Sender;
-
-        /// <summary>
-        /// Contact элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Contact;
-
-        /// <summary>
-        /// MailSend элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton MailSend;
-
-        /// <summary>
-        /// TextMessage элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextMessage;
-
-        /// <summary>
-        /// DynSlider элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::rost.UC.DynamicSlider DynSlider;
 
         /// <summary>
         /// UpdatePanel1 элемент управления.
@@ -78,39 +24,57 @@ namespace rost
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Sender1 элемент управления.
+        /// Replist1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Sender1;
+        protected global::System.Web.UI.WebControls.Repeater Replist1;
 
         /// <summary>
-        /// Contact1 элемент управления.
+        /// FirstId элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Contact1;
+        protected global::System.Web.UI.WebControls.HiddenField FirstId;
 
         /// <summary>
-        /// Otzyv элемент управления.
+        /// IDS элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Otzyv;
+        protected global::System.Web.UI.WebControls.HiddenField IDS;
 
         /// <summary>
-        /// TextMessage1 элемент управления.
+        /// ButtonPrev элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextMessage1;
+        protected global::System.Web.UI.WebControls.Button ButtonPrev;
+
+        /// <summary>
+        /// ButtonNext элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonNext;
+
+        /// <summary>
+        /// SqlDataSourceBaseText элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceBaseText;
     }
 }

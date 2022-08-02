@@ -42,8 +42,10 @@ namespace rost
                 mimeMessage.From.Add(new MailboxAddress("home", "info@войцеховская.рф"));
                 mimeMessage.To.Add(new MailboxAddress("sender", "kigl@yandex.ru"));
                 mimeMessage.Subject = "Сообщение с сайта войцеховская.рф"; ;
-                var bodyBuilder = new BodyBuilder();
-                bodyBuilder.TextBody = "Отправитель: " + Sender + Environment.NewLine + "Контакт:    " + Contact + Environment.NewLine + "Сообщение: " + Message;
+                var bodyBuilder = new BodyBuilder
+                {
+                    TextBody = "Отправитель: " + Sender + Environment.NewLine + "Контакт:    " + Contact + Environment.NewLine + "Сообщение: " + Message
+                };
                 mimeMessage.Body = bodyBuilder.ToMessageBody();
                 using (var client = new SmtpClient())
                 {

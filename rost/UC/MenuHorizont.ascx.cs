@@ -72,7 +72,7 @@ namespace rost.UC
                     }
                 }
                 Conn.Close();
-                HtmlText += @" </ul>
+                HtmlText += @" </ul> 
 ";
                 ContextMenu.Text = HtmlText;
             }

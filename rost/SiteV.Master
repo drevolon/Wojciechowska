@@ -91,7 +91,7 @@
 
                             <uc1:MenuHorizont runat="server" ID="MenuHorizont" IdMenu="1" />
 
-                            <%--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                           <%-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
@@ -106,9 +106,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                                 </li>
-                            </ul>--%>
-                          
+                            </ul> --%>
                         </div>
+                        <div class="pull-right fs-5 text-white"><a href="descPayLogIn.aspx"  class="nav-link"><i class="fa fa-arrow-right"></i></a></div>
                     </div>
                 </nav>
 

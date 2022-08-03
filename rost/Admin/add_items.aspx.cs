@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.UI.WebControls;
 
@@ -72,6 +73,8 @@ namespace rost.Admin
                (e.Row.RowState == DataControlRowState.Normal || e.Row.RowState == DataControlRowState.Alternate))
             {
 
+                
+
                 String items = ((Label)e.Row.FindControl("LabelItemItems")).Text;
                 String type_img = "image_low";
                 int w = 70;
@@ -122,6 +125,10 @@ namespace rost.Admin
             }
             if ((e.Row.RowState & DataControlRowState.Edit) == DataControlRowState.Edit)
             {
+
+                //TextBox TextBoxBase_text = ((TextBox)e.Row.FindControl("TextBoxBase_text"));
+                //TextBoxBase_text.Text = HttpUtility.HtmlEncode(TextBoxBase_text.Text);
+
                 GridView GridProps = (GridView)e.Row.FindControl("GridPropsEdit");
                 if (GridProps != null)
                 {

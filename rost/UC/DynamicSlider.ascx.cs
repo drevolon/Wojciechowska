@@ -108,8 +108,8 @@ select @ids";
                 if (((Label)e.Item.FindControl("LabelItemHave_img")).Text == "True")
                 {
                     ((Image)e.Item.FindControl("ImageItem")).Visible = true;
-                    //((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_lowCA&items=" + items + "&w=525&h=289";
-                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_lowCA&items=" + items;
+                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_lowCA&items=" + items + "&w=525&h=289";
+                    //((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_lowCA&items=" + items;
                 }
                 else
                 {

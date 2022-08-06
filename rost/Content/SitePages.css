@@ -80,36 +80,36 @@ header_page .banner_menu .bg-light {
     background-color: #5B3723 !important;
 }
 
-.audit {
+.desc {
     padding: 0px 0px 0px 0px;
     color: #5B3723;
 }
 
     
 
-        .audit .left_col {
+        .desc .left_col {
         }
-            .audit .left_col .header {
+            .desc .left_col .header {
                 margin-top: 50px;
             }
 
-            .audit .left_col .items {
+            .desc .left_col .items {
                 margin-top: 30px;
             }
 
-            .audit .left_col img {
+            .desc .left_col img {
                
                 
                /* height:316px;*/
                 border: 1px solid #5B3723;
             }
 
-            .audit .left_col table {
+            .desc .left_col table {
                
                 width: 706px !important;
                 border: 1px solid #5B3723 !important;
             }
-            .audit .left_col .td_name {
+            .desc .left_col .td_name {
                 background: #D9B594;
                 border: 1px solid #5B3723;
                 padding: 10px 0px 10px 12px;
@@ -120,20 +120,20 @@ header_page .banner_menu .bg-light {
                 
             }
 
-            .audit .left_col .td_value {
+            .desc .left_col .td_value {
                 background: #D9B344;
                 border: 1px solid #5B3723;
                 padding: 10px 0px 10px 12px;
             }
 
 
-        .audit .right_col {
+        .desc .right_col {
             
             background: #737473;
             padding: 30px 55px;
         }
 
-            .audit .right_col h4 {
+            .desc .right_col h4 {
                 font-style: normal;
                 font-weight: 700;
                 font-size: 28px;
@@ -142,15 +142,15 @@ header_page .banner_menu .bg-light {
                 color: #FFFFFF;
             }
 
-            .audit .right_col img {
+            .desc .right_col img {
                 margin-top: 30px;
             }
 
-    .audit .experience {
+    .desc .experience {
         margin-top: 30px;
     }
 
-            .audit .experience .base_text {
+            .desc .experience .base_text {
                 
                 background: #FFFFFF;
                 border: 1px solid #737473;
@@ -158,10 +158,56 @@ header_page .banner_menu .bg-light {
                 padding: 30px;
                 margin-bottom:30px;
             }
+
+    .pages {
+
+    }
+        .pages .content {
+            height:640px;
+        }
+
+        .pages .header {
+            margin-top: 50px;
+        }
+        .pages .items {
+            margin-top: 30px;
+        }
+        .pages .card {
+            width: 706px;
+            filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+            margin-bottom:30px;
+        }
+        .pages .item_body {
+            background: #D9B344;
+            padding: 10px;
+            border: 1px solid #5B3723;
+        }
+        .pages .card-body {
+            
+        }
+        .pages .item_img {
+            background: #D9B594;
+            padding: 20px;
+            border: 1px solid #5B3723;
+        }
+
+        .pages .card_url {
+            text-decoration: none;
+            color: #5B3723 !important;
+        }
+
+        .pages .card_url:hover {
+            text-decoration: none;
+            color: #000000 !important;
+        }
+
+.pages .card-img {
+}
+
+
+
 footer {
-   
-    padding:19px;
-   
+    padding: 19px;
     background: #A57665;
 }
 
@@ -214,26 +260,26 @@ footer {
 }
 /*Small*/
 @media only screen and (max-width: 767px) {
-    .audit .experience {
+    .desc .experience {
         margin-top: 30px;
         margin-left:0px;
     }
-        .audit .experience .base_text {
+        .desc .experience .base_text {
             margin-bottom: 30px;
             margin-left: 0px;
         }
 
 
-    .audit .right_col {
+    .desc .right_col {
         padding: 21px 18px;
     }
 
-    .audit .right_col img {
+    .desc .right_col img {
         margin-top: 30px;
         
     }
 
-    .audit .left_col .items {
+    .desc .left_col .items {
         display:flex;
         justify-content:center;
         align-items:center;

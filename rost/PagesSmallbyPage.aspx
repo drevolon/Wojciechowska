@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Boot4.Master" AutoEventWireup="true" CodeBehind="PagesSmallbyPage.aspx.cs" Inherits="rost.PagesSmallbyPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Boot4.Master" AutoEventWireup="true" CodeBehind="PagesPersonal.aspx.cs" Inherits="rost.PagesPersonal" %>
 
 <%@ Register Src="~/UC/UniversalTextBlocksPages.ascx" TagPrefix="uc1" TagName="UniversalTextPages" %>
 

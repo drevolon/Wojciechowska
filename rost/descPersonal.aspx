@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
 
-    <section class="audit">
+    <section class="desc">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-9 left_col">

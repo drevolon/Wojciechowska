@@ -64,7 +64,7 @@
 
                         </asp:Repeater>
 
-                        <div class="card g-0">
+                 <%--       <div class="card g-0">
                             <div class="row g-0">
                                 <div class="col-md-4 item_img">
                                     <div class="card-img">
@@ -112,7 +112,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
 
 
                     </div>

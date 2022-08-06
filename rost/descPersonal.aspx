@@ -14,7 +14,7 @@
                 <div class="col-lg-9 left_col">
                     <div class="row header">
                         <div class="col-lg-12 text-center ">
-                            <h3>Аудит</h3>
+                            <h3><asp:Literal ID="TextPages" runat="server"></asp:Literal></h3>
                         </div>
                     </div>
                     <div class="row items">

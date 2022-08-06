@@ -18,6 +18,7 @@ namespace rost
             if (Request.Params["id_text"]!=null)
             {
                 string id_text = Request.Params["id_text"].ToString();
+                string id_pages = string.Empty;
                 using (SqlConnection sqc = new SqlConnection(ConfigurationManager.ConnectionStrings["rostConnectionString"].ToString()))
                 {
                     sqc.Open();
@@ -32,7 +33,7 @@ namespace rost
                             RepeatProps.DataSource = ListProps.Property;
                             RepeatProps.DataBind();
                         }
-
+                        
                         string DopDocs = sdr["images_add"].ToString();
                         if (DopDocs != string.Empty)
                         {
@@ -41,7 +42,7 @@ namespace rost
                             RepeatDocs.DataBind();
                         }
 
-
+                        id_pages = sdr["id_pages"].ToString();
                         MainText.Text = sdr["base_text"].ToString();
 
                         ImageItem.ImageUrl = "~/photoDB.ashx?type_img=image_lowCA&items=" + sdr["items"].ToString() + "&w=315&h=418";
@@ -59,6 +60,11 @@ namespace rost
 
                     }
                     sdr.Close();
+                    if (id_pages != string.Empty)
+                    {
+                        cmd = new SqlCommand("select name_pages from Pages where id_pages=" + id_pages, sqc);
+                        TextPages.Text = cmd.ExecuteScalar()?.ToString() ?? string.Empty;
+                    }
                     sqc.Close();
                 }
 

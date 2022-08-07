@@ -238,6 +238,7 @@
     <Content Include="Default_old.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="descPayLogIn.aspx" />
+    <Content Include="PagesPersonalTemp.aspx" />
     <Content Include="PagesPersonal.aspx" />
     <Content Include="descPersonal.aspx" />
     <Content Include="descImage.aspx" />
@@ -2295,6 +2296,13 @@
     </Compile>
     <Compile Include="descPayLogIn.aspx.designer.cs">
       <DependentUpon>descPayLogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PagesPersonalTemp.aspx.cs">
+      <DependentUpon>PagesPersonalTemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PagesPersonalTemp.aspx.designer.cs">
+      <DependentUpon>PagesPersonalTemp.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagesPersonal.aspx.cs">
       <DependentUpon>PagesPersonal.aspx</DependentUpon>

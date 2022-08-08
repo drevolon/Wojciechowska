@@ -9,6 +9,8 @@
 <%@ Register Src="~/UC/OurProjects.ascx" TagPrefix="uc1" TagName="OurProjects" %>
 <%@ Register Src="~/UC/UniversalTextBlocksNew.ascx" TagPrefix="uc1" TagName="UniversalTextBlocksNew" %>
 <%@ Register Src="~/UC/DynamicSlider.ascx" TagPrefix="uc1" TagName="DynamicSlider" %>
+<%@ Register Src="~/UC/SectionText.ascx" TagPrefix="uc1" TagName="SectionText" %>
+<%@ Register Src="~/UC/SectionImage.ascx" TagPrefix="uc1" TagName="SectionImage" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -114,7 +116,7 @@
         </div>
     </section>
 
-    <section class="callback">
+    <section class="callback" id="callback" name="callback">
         <asp:UpdatePanel ID="upd1" runat="server">
             <ContentTemplate>
 
@@ -158,7 +160,7 @@
         </asp:UpdatePanel>
     </section>
 
-    <section class="discount">
+<%--    <section class="discount">
         <div class="container-fluid">
             <div class="row header">
                 <div class="col-12 text-center">
@@ -180,7 +182,36 @@
                         <font size="65">в два раза ниже рыночной !</font>
                     </div>
                     <div class="m-auto">
-                        <asp:LinkButton Text="text" runat="server" CssClass="  btn btn-secondary btnm">
+                        <asp:LinkButton Text="text" runat="server" CssClass="  btn btn-secondary btnm" PostBackUrl="#callback">
+                            <i class="fa fa-check-circle"></i> ПРИНЯТЬ УЧАСТИЕ
+                        </asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>--%>
+
+    <section class="discount">
+        <div class="container-fluid">
+            <div class="row header">
+                <div class="col-12 text-center">
+                    <h3>Акции и специальные предложения</h3>
+                </div>
+            </div>
+            <div class="row items">
+                <div class="col-lg-3">
+                    <div class="discount_img">
+                        <uc1:SectionImage ID="ImageDiscount" runat="server" IdText="530" iWidth="430" iHeight="411"></uc1:SectionImage>
+                    </div>
+                </div>
+                <div class="col-lg-9 text-center d-flex align-content-between flex-wrap justify-content-center">
+                    <div class="discount_text">
+                        <uc1:SectionText ID="TextDiscount" runat="server" IdText="530"></uc1:SectionText>
+                        
+                    </div>
+                    <div class="m-auto">
+                        <asp:LinkButton Text="text" runat="server" CssClass="  btn btn-secondary btnm" PostBackUrl="#callback">
                             <i class="fa fa-check-circle"></i> ПРИНЯТЬ УЧАСТИЕ
                         </asp:LinkButton>
                     </div>
@@ -189,6 +220,7 @@
 
         </div>
     </section>
+
 
     <section class="our_clients">
         <div class="container-fluid">

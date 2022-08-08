@@ -128,28 +128,30 @@ namespace rost.Admin
 
                 //TextBox TextBoxBase_text = ((TextBox)e.Row.FindControl("TextBoxBase_text"));
                 //TextBoxBase_text.Text = HttpUtility.HtmlEncode(TextBoxBase_text.Text);
-
-                GridView GridProps = (GridView)e.Row.FindControl("GridPropsEdit");
-                if (GridProps != null)
+                try
                 {
-                    string jsonString = ((Label)e.Row.FindControl("LabelPropsEdit")).Text;
-                    JsonProps ListProps = (new JavaScriptSerializer()).Deserialize<JsonProps>(jsonString);
-                    GridProps.DataSource = ListProps.Property;
-                    GridProps.DataBind();
+                    GridView GridProps = (GridView)e.Row.FindControl("GridPropsEdit");
+                    if (GridProps != null)
+                    {
+                        string jsonString = ((Label)e.Row.FindControl("LabelPropsEdit")).Text;
+                        JsonProps ListProps = (new JavaScriptSerializer()).Deserialize<JsonProps>(jsonString);
+                        GridProps.DataSource = ListProps.Property;
+                        GridProps.DataBind();
+                    }
+                    GridView panDoc = (GridView)(e.Row.FindControl("GridDocsEdit"));
+                    string DopDocs = ((Label)(e.Row.FindControl("LabelDocsEdit"))).Text;
+                    if (DopDocs != string.Empty)
+                    {
+                        JsonImages ListDocs = (new JavaScriptSerializer()).Deserialize<JsonImages>(DopDocs);
+                        JImg jimg = new JImg();
+                        jimg.name = string.Empty;
+                        jimg.items = string.Empty;
+                        ListDocs.Images.Add(jimg);
+                        panDoc.DataSource = ListDocs.Images;
+                        panDoc.DataBind();
+                    }
                 }
-                GridView panDoc = (GridView)(e.Row.FindControl("GridDocsEdit"));
-                string DopDocs = ((Label)(e.Row.FindControl("LabelDocsEdit"))).Text;
-                if (DopDocs != string.Empty)
-                {
-                    JsonImages ListDocs = (new JavaScriptSerializer()).Deserialize<JsonImages>(DopDocs);
-                    JImg jimg = new JImg();
-                    jimg.name = string.Empty;
-                    jimg.items = string.Empty;
-                    ListDocs.Images.Add(jimg);
-                    panDoc.DataSource = ListDocs.Images;
-                    panDoc.DataBind();
-                }
-
+                catch { }
 
             }
         }

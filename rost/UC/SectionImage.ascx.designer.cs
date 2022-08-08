@@ -7,29 +7,29 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace SiteV
+namespace rost.UC
 {
 
 
-    public partial class SiteMaster
+    public partial class SectionImage
     {
 
         /// <summary>
-        /// MenuHorizont элемент управления.
+        /// ImageItem элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::rost.UC.MenuHorizont MenuHorizont;
+        protected global::Encosia.HighslideImage ImageItem;
 
         /// <summary>
-        /// MainContent элемент управления.
+        /// HighslideManager1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::Encosia.HighslideManager HighslideManager1;
     }
 }

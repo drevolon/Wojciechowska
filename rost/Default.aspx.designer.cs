@@ -60,6 +60,24 @@ namespace rost
         protected global::System.Web.UI.WebControls.TextBox TextMessage;
 
         /// <summary>
+        /// ImageDiscount элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::rost.UC.SectionImage ImageDiscount;
+
+        /// <summary>
+        /// TextDiscount элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::rost.UC.SectionText TextDiscount;
+
+        /// <summary>
         /// DynSlider элемент управления.
         /// </summary>
         /// <remarks>

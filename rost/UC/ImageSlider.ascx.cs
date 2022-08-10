@@ -60,27 +60,27 @@ namespace rost.UC
                    (e.Item.ItemType == ListItemType.AlternatingItem))
             {
                 String items = ((Label)e.Item.FindControl("LabelItemItems")).Text;
-                String type_img = "news_id";
-                String id_images = ((Label)e.Item.FindControl("LabelItemId_images")).Text;
-                string id_text = ((Label)e.Item.FindControl("LabelId_text")).Text;
+//                String type_img = "news_id";
+//                String id_images = ((Label)e.Item.FindControl("LabelItemId_images")).Text;
+//                string id_text = ((Label)e.Item.FindControl("LabelId_text")).Text;
                 //                string base_text = ((Label)e.Item.FindControl("LabelItemBase_text")).Text;
 
 
-                ((HyperLink)e.Item.FindControl("HyperLinkImg")).NavigateUrl = "~/descText.aspx?id_text=" + id_text + "&items=" + items;
+//                ((HyperLink)e.Item.FindControl("HyperLinkImg")).NavigateUrl = "~/descText.aspx?id_text=" + id_text + "&items=" + items;
 
-                if (((Label)e.Item.FindControl("LabelItemHave_img")).Text == "True")
-                {
+  //              if (((Label)e.Item.FindControl("LabelItemHave_img")).Text == "True")
+  //              {
                     //((Image)e.Row.FindControl("ImageCatalog")).ImageUrl = "./../photoDB.ashx?type_img=" + type_img + "&items=" + items + "&w=" + w + "&h=" + h;
 
-                    ((Image)e.Item.FindControl("ImageItem")).Visible = true;
+//                    ((Image)e.Item.FindControl("ImageItem")).Visible = true;
                     //                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=" + type_img + "&id=" + id_images;
                     //((Image)e.Row.FindControl("ImageItem")).FullImageURL = "photoDB.ashx?type_img=" + type_img_big + "&items=" + items;
-                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_big&items=" + items + "&w=1442&h=508";
-                }
-                else
-                {
-                    ((System.Web.UI.WebControls.Image)e.Item.FindControl("ImageItem")).Visible = false;
-                }
+                    ((Image)e.Item.FindControl("ImageItem")).ImageUrl = "./../photoDB.ashx?type_img=image_bigCA&items=" + items;
+                //}
+                //else
+                //{
+                //    ((System.Web.UI.WebControls.Image)e.Item.FindControl("ImageItem")).Visible = false;
+                //}
 
 
             }

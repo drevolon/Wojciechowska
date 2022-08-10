@@ -2,15 +2,13 @@
 
 
 
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+<div id="carouselImageSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
 
         <asp:Repeater runat="server" ID="RepSlider" OnItemDataBound="RepSlider_ItemDataBound" DataSourceID="SqlDataSourceBaseText">
             <ItemTemplate>
                 <div runat="server" class='<%# Eval("rownum").ToString()=="1"?"carousel-item active":"carousel-item" %>'>
-                    <asp:HyperLink ID="HyperLinkImg" runat="server" NavigateUrl="#">
-                        <asp:Image ID="ImageItem" ImageUrl="~/photoDB.ashx?" runat="server" CssClass="img-fluid" />
-                    </asp:HyperLink>
+                        <asp:Image ID="ImageItem" ImageUrl="~/photoDB.ashx?" runat="server" CssClass="d-block w-100" />
                 </div>
                 <asp:Label ID="LabelItemItems" runat="server" Text='<%# Bind("items") %>' Visible="false"></asp:Label>
                 <asp:Label ID="LabelItemHave_img" runat="server" Text='<%# Bind("have_img") %>' Visible="false"></asp:Label>
@@ -20,11 +18,11 @@
         </asp:Repeater>
 
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselImageSlider" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselImageSlider" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>

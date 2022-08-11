@@ -217,9 +217,9 @@
                             </FTB:FreeTextBox>
                             <label class="form-text">Полное описание</label>
                             <%--<asp:TextBox ID="TextBoxBase_text" runat="server" Text='<%# Bind("base_text") %>' TextMode="MultiLine" Height="200" CssClass="form-control"></asp:TextBox>--%>
-                               <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server" Width="500px" Height="200" Text='<%# Bind("base_text") %>' AllowHtmlMode="true" AutoHideToolbar="true" EnableToolbars="false">
+                               <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server"  Text='<%# Bind("base_text") %>' ScriptMode="InPage" AllowHtmlMode="true"  >
                             </FTB:FreeTextBox>
-
+                           
                             <asp:Label ID="LabelEditid_text" runat="server" Text='<%# Eval("id_text") %>' Visible="false"></asp:Label>
                             <asp:Label ID="LabelEditItems" runat="server" Text='<%# Bind("items") %>' Visible="false"></asp:Label>
                             <%--<asp:Label ID="LabelFileNames" runat="server" Text='<%# Bind("fileNames") %>' Visible="false"></asp:Label>--%>
@@ -229,9 +229,9 @@
                             <%--<asp:Label ID="LabelEditFilePath" runat="server" Text='<%# Bind("filePath") %>' Visible="false"></asp:Label>--%>
 
 
-                            <div class="input-group">
+                            <div class="input-group mt-3">
 
-                                <asp:FileUpload ID="FileUploadImg" runat="server" ToolTip="Смена фото" CssClass="input-group" />
+                                <asp:FileUpload ID="FileUploadImg" runat="server" ToolTip="Смена фото" CssClass=" form-control-file"  />
                             </div>
                         </EditItemTemplate>
                         <ItemTemplate>

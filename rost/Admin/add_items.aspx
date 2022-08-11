@@ -212,13 +212,13 @@
                     <asp:TemplateField HeaderText="Текст" SortExpression="description_text">
                         <EditItemTemplate>
                             <label class="form-text">Краткое описание</label>
-                            <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("description_text") %>' TextMode="MultiLine" Height="200"  Width="500px" CssClass="form-control" ></asp:TextBox>
-                          <%--  <FTB:FreeTextBox ID="FreeTextBoxDescription_text" runat="server" Width="100%" Height="500" Text='<%# Bind("description_text") %>'>
-                            </FTB:FreeTextBox>--%>
+                            <%--<asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("description_text") %>' TextMode="MultiLine" Height="200"  Width="500px" CssClass="form-control" ></asp:TextBox>--%>
+                            <FTB:FreeTextBox ID="FreeTextBoxDescription_text" runat="server" Width="500px" Height="200" Text='<%# Bind("description_text") %>' AllowHtmlMode="true" EnableToolbars="false">
+                            </FTB:FreeTextBox>
                             <label class="form-text">Полное описание</label>
-                            <asp:TextBox ID="TextBoxBase_text" runat="server" Text='<%# Bind("base_text") %>' TextMode="MultiLine" Height="200" CssClass="form-control"></asp:TextBox>
-                            <%--   <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server" Width="100%" Height="500" Text='<%# Bind("base_text") %>' AllowHtmlMode="true">
-                            </FTB:FreeTextBox>--%>
+                            <%--<asp:TextBox ID="TextBoxBase_text" runat="server" Text='<%# Bind("base_text") %>' TextMode="MultiLine" Height="200" CssClass="form-control"></asp:TextBox>--%>
+                               <FTB:FreeTextBox ID="FreeTextBoxBase_text" runat="server" Width="500px" Height="200" Text='<%# Bind("base_text") %>' AllowHtmlMode="true" AutoHideToolbar="true" EnableToolbars="false">
+                            </FTB:FreeTextBox>
 
                             <asp:Label ID="LabelEditid_text" runat="server" Text='<%# Eval("id_text") %>' Visible="false"></asp:Label>
                             <asp:Label ID="LabelEditItems" runat="server" Text='<%# Bind("items") %>' Visible="false"></asp:Label>

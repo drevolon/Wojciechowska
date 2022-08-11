@@ -53,19 +53,19 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-12 col-xl-4">
                     <div class="form-group">
                         <label for="TextBoxNpp_text">Номер сортировки</label>
                         <asp:TextBox ID="TextBoxNpp_text" runat="server" CssClass="form-control" placeholder="Введите число"></asp:TextBox>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-12 col-xl-4">
                     <div class="form-group">
                         <label for="TextBoxHeader_text">Заголовок</label>
                         <asp:TextBox ID="TextBoxHeader_text" runat="server" CssClass="form-control" placeholder="Введите заголовок"></asp:TextBox>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-12 col-xl-4">
                     <div class="form-group">
                         <label for="TextBoxHeader_text">Загрузить фото</label>
                         <asp:FileUpload ID="FileUploadImg" runat="server" CssClass="form-control" />
@@ -73,57 +73,67 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-12 col-xl-4">
                     <div class="form-group">
                         <label for="TextBoxDescription_text">Текст на первой странице (аннотация)</label>
                         <%--<asp:TextBox ID="TextBoxDescription_text" runat="server"  placeholder="Введите текст" TextMode="MultiLine" Height="100px"></asp:TextBox>--%>
-                        <FTB:FreeTextBox ID="TextBoxDescription_text" runat="server"></FTB:FreeTextBox>
+                        <FTB:FreeTextBox ID="TextBoxDescription_text" runat="server" DesignModeBodyTagCssClass="form-control"></FTB:FreeTextBox>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-12 col-xl-4">
                     <div class="form-group">
                         <label for="TextBoxBase_text">Текст на второй странице (полный)</label>
                         <%--<asp:TextBox ID="TextBoxBase_text" runat="server" CssClass="form-control" placeholder="Введите текст" TextMode="MultiLine" Height="200px"></asp:TextBox>--%>
-                        <FTB:FreeTextBox ID="TextBoxBase_text" runat="server"></FTB:FreeTextBox>
+                        <FTB:FreeTextBox ID="TextBoxBase_text" runat="server" DesignModeBodyTagCssClass="form-control"></FTB:FreeTextBox>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-12 col-xl-4">
                     <div class="row">
-                        <asp:GridView ID="GridProps" AutoGenerateColumns="False" ShowHeader="false" runat="server">
-                            <Columns>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <asp:Label runat="server" ID="LabelName" Text='<%# Bind("name") %>'></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <asp:TextBox runat="server" ID="TextValue" Text='<%# Bind("value") %>' placeholder="Введите значение"></asp:TextBox>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="TextBoxQtyFiles">Количество образов документов:</label>
-                            <div class="col-lg-2 col-md-2">
-                                <asp:TextBox ID="TextBoxQtyFiles" runat="server" CssClass="form-control" placeholder="Введите количество"></asp:TextBox>
-                            </div>
-                            <div class="col-lg-2 col-md-2">
-                                <asp:LinkButton ID="LinkButtonQtyFiles" runat="server" CssClass="btn btn-primary" OnClick="LinkButtonQtyFiles_Click" Text="Применить"></asp:LinkButton>
-                            </div>
-                            <label for="TextBoxHeader_text">Список загружаемых образов документов</label>
-                            <asp:GridView ID="GridViewFiles" AutoGenerateColumns="False" ShowHeader="false" runat="server">
+                        <div class="col-md-12">
+                            <asp:GridView ID="GridProps" AutoGenerateColumns="False" ShowHeader="false" runat="server" CssClass="table table-bordered table-hover table-primary table-striped"> 
                                 <Columns>
                                     <asp:TemplateField>
                                         <ItemTemplate>
-                                            <asp:TextBox runat="server" ID="TextFileName" Text='<%# Bind("FileName") %>' placeholder="Введите наименование файла"></asp:TextBox>
+                                            <asp:Label runat="server" ID="LabelName" Text='<%# Bind("name") %>' CssClass="form-text"></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField>
                                         <ItemTemplate>
-                                            <asp:FileUpload ID="FInsertUpload" runat="server" />
+                                            <asp:TextBox runat="server" ID="TextValue" Text='<%# Bind("value") %>' placeholder="Введите значение" CssClass="form-control"></asp:TextBox>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="TextBoxQtyFiles" class="form-text">Количество образов документов:</label>
+                                    
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <asp:TextBox ID="TextBoxQtyFiles" runat="server" CssClass="form-control" placeholder="Введите количество" Width="50px"></asp:TextBox>
+                        </div>
+                        <div class="col-md-3">
+                            <asp:LinkButton ID="LinkButtonQtyFiles" runat="server" CssClass="btn btn-success" OnClick="LinkButtonQtyFiles_Click" Text="Применить"></asp:LinkButton>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="TextBoxHeader_text" class="form-text">Список загружаемых образов документов</label>
+                            <asp:GridView ID="GridViewFiles" AutoGenerateColumns="False" ShowHeader="false" runat="server" CssClass="table table-bordered table-hover table-primary table-striped">
+                                <Columns>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:TextBox runat="server" ID="TextFileName" Text='<%# Bind("FileName") %>' placeholder="Введите наименование файла" CssClass="form-control"></asp:TextBox>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:FileUpload ID="FInsertUpload" runat="server" CssClass="form-control-file" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>

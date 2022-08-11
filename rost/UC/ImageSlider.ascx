@@ -8,12 +8,14 @@
         <asp:Repeater runat="server" ID="RepSlider" OnItemDataBound="RepSlider_ItemDataBound" DataSourceID="SqlDataSourceBaseText">
             <ItemTemplate>
                 <div runat="server" class='<%# Eval("rownum").ToString()=="1"?"carousel-item active":"carousel-item" %>'>
-                        <asp:Image ID="ImageItem" ImageUrl="~/photoDB.ashx?" runat="server" CssClass="d-block w-100" />
+                    <asp:HyperLink ID="descLink" runat="server" NavigateUrl='<%# "./../desc.aspx?id_text="+Eval("id_text") %>' >
+                        <asp:Image ID="ImageItem" ImageUrl='<%# "./../photoDB.ashx?type_img=image_bigCA&items=" + Eval("items").ToString() %>' runat="server" CssClass="d-block w-100" />
+                        </asp:HyperLink>
                 </div>
-                <asp:Label ID="LabelItemItems" runat="server" Text='<%# Bind("items") %>' Visible="false"></asp:Label>
+<%--                <asp:Label ID="LabelItemItems" runat="server" Text='<%# Bind("items") %>' Visible="false"></asp:Label>
                 <asp:Label ID="LabelItemHave_img" runat="server" Text='<%# Bind("have_img") %>' Visible="false"></asp:Label>
                 <asp:Label ID="LabelItemId_images" runat="server" Text='<%# Bind("id_images") %>' Visible="false"></asp:Label>
-                <asp:Label ID="LabelId_text" runat="server" Text='<%# Bind("id_text") %>' Visible="false"></asp:Label>
+                <asp:Label ID="LabelId_text" runat="server" Text='<%# Bind("id_text") %>' Visible="false"></asp:Label>--%>
             </ItemTemplate>
         </asp:Repeater>
 

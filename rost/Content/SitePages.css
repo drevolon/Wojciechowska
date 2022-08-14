@@ -20,6 +20,11 @@ body {
     font-family: Roboto,Roboto-Regular,Arial,Verdana;
     background: url('../images/backprezent.jpg') no-repeat;
     background-position: center top;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    justify-items:center;
 }
 
 .banner_top {
@@ -80,13 +85,19 @@ header_page .banner_menu .bg-light {
     background-color: #5B3723 !important;
 }
 
+.body-content {
+    
+    flex-direction:column;
+    flex: 1 1 auto;
+    justify-content:center;
+}
+
+
+
 .desc {
     padding: 0px 0px 0px 0px;
     color: #5B3723;
 }
-
-    
-
         .desc .left_col {
         }
             .desc .left_col .header {
@@ -106,7 +117,7 @@ header_page .banner_menu .bg-light {
 
             .desc .left_col table {
                
-                width: 706px !important;
+                /*width: 706px !important;*/
                 border: 1px solid #5B3723 !important;
             }
             .desc .left_col .td_name {
@@ -144,6 +155,7 @@ header_page .banner_menu .bg-light {
 
             .desc .right_col img {
                 margin-top: 30px;
+                width:100%;
             }
 
     .desc .experience {
@@ -159,8 +171,17 @@ header_page .banner_menu .bg-light {
                 margin-bottom:30px;
             }
 
-    .pages {
+.desc_one
+{
+    
+}
+    .desc_one .content {
+        height:640px;
+        /*flex: 1 1 auto;*/
+    }
 
+
+    .pages {
     }
         .pages .content {
             height:640px;

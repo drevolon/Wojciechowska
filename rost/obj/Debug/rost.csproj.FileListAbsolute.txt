@@ -194,7 +194,6 @@ D:\projects\Wojciechowska\rost\bin\System.Web.Providers.dll
 D:\projects\Wojciechowska\rost\bin\WebGrease.dll
 D:\projects\Wojciechowska\rost\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\projects\Wojciechowska\rost\bin\System.Web.Optimization.xml
-D:\projects\Wojciechowska\rost\bin\Antlr3.Runtime.pdb
 D:\projects\Wojciechowska\rost\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\projects\Wojciechowska\rost\bin\Newtonsoft.Json.xml
 D:\projects\Wojciechowska\rost\bin\EntityFramework.xml

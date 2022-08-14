@@ -19,25 +19,25 @@ namespace rost
             if (e.Row.RowType == DataControlRowType.DataRow &&
               (e.Row.RowState == DataControlRowState.Normal || e.Row.RowState == DataControlRowState.Alternate))
             {
-                String type_img = "image_lowCA"; //"news";
-                String w = "250";
-                String h = "200";
+                //String type_img = "image_lowCA"; //"news";
+                //String w = "250";
+                //String h = "200";
 
-                String type_img_big = "image_bigCA";
-                String items = ((Label)e.Row.FindControl("LabelItemItems")).Text;
+                //String type_img_big = "image_bigCA";
+                //String items = ((Label)e.Row.FindControl("LabelItemItems")).Text;
 
 
-                if (((Label)e.Row.FindControl("LabelItemHave_img")).Text == "True")
-                {
-                    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).Visible = true;
-                    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).ImageUrl = "~/photoDB.ashx?type_img=" + type_img + "&items=" + items + "&w=" + w + "&h=" + h;
-                    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).FullImageURL = "~/photoDB.ashx?type_img=" + type_img_big + "&items=" + items;
-                }
-                else
-                {
-                    ((System.Web.UI.WebControls.Image)e.Row.FindControl("ImageItem")).Visible = false;
-                    ((Panel)e.Row.FindControl("PanelImageRight")).Visible = false;
-                }
+                //if (((Label)e.Row.FindControl("LabelItemHave_img")).Text == "True")
+                //{
+                //    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).Visible = true;
+                //    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).ImageUrl = "~/photoDB.ashx?type_img=" + type_img + "&items=" + items + "&w=" + w + "&h=" + h;
+                //    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).FullImageURL = "~/photoDB.ashx?type_img=" + type_img_big + "&items=" + items;
+                //}
+                //else
+                //{
+                //    ((System.Web.UI.WebControls.Image)e.Row.FindControl("ImageItem")).Visible = false;
+                //    ((Panel)e.Row.FindControl("PanelImageRight")).Visible = false;
+                //}
             }
         }
     }

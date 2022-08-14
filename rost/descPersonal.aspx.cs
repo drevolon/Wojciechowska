@@ -76,7 +76,7 @@ namespace rost
             if (e.Row.RowType == DataControlRowType.DataRow &&
               (e.Row.RowState == DataControlRowState.Normal || e.Row.RowState == DataControlRowState.Alternate))
             {
-                String type_img = "image_lowCA"; //"news";
+                String type_img =  "news"; //"image_lowCA";
                 String w = "250";
                 String h = "200";
 
@@ -87,7 +87,10 @@ namespace rost
                 if (((Label)e.Row.FindControl("LabelItemHave_img")).Text == "True")
                 {
                     ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).Visible = true;
-                    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).ImageUrl = "~/photoDB.ashx?type_img=" + type_img + "&items=" + items + "&w=" + w + "&h=" + h;
+                    //((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).ImageUrl = "~/photoDB.ashx?type_img=" + type_img + "&items=" + items + "&w=" + w + "&h=" + h;
+
+                    ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).ImageUrl = "~/photoDB.ashx?type_img=" + type_img + "&items=" + items;
+
                     ((Encosia.HighslideImage)e.Row.FindControl("ImageItem")).FullImageURL = "~/photoDB.ashx?type_img=" + type_img_big + "&items=" + items;
                 }
                 else

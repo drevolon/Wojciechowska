@@ -20,10 +20,10 @@
                     <div class="row items">
                         <div class="col-lg-12">
                             <div class="row">
-                                <div class="col-12 col-sm-3 col-lg-3 col-xl-2  offset-lg-2 g-0">
+                                <div class="col-12 col-sm-12 col-lg-3 col-xl-2  offset-lg-2 g-0">
                                     <%--                                    <img src="Images/Employees/Director.jpg" class="img-thumbnail" />--%>
-                                    <cc1:HighslideImage ID="ImageItem" runat="server" CssClass="img-thumbnail"
-                                        BorderWidth="0px" Width="340px" Height="420" />
+                                    <cc1:HighslideImage ID="ImageItem" runat="server" CssClass="img-thumbnail img-fluid img-responsive w-100"
+                                        BorderWidth="0px" />
                                     <cc1:HighslideManager ID="HighslideManager1" runat="server" FadeInOut="true">
                                     </cc1:HighslideManager>
                                 </div>
@@ -94,14 +94,14 @@
 
 
                 </div>
-                <div class="col-lg-3 right_col">
+                <div class="col-lg-12 col-xl-3 right_col">
                     <h4>Документы</h4>
                     <%--                    <img src="Images/Doc/doc1.png" />--%>
                     <asp:Repeater ID="RepeatDocs" runat="server">
                         <ItemTemplate>
-                            <cc1:HighslideImage ID="ImageItemDoc" runat="server" CssClass="img-thumbnail" ImageUrl = '<%#"~/photoDB.ashx?type_img=image_lowCA&items=" + Eval("items").ToString() + "&w=365&h=236" %>'
+                            <cc1:HighslideImage ID="ImageItemDoc" runat="server" CssClass="img-thumbnail img-fluid img-responsive" ImageUrl = '<%#"~/photoDB.ashx?type_img=image_lowCA&items=" + Eval("items").ToString() + "&w=365&h=236" %>'
                                 FullImageURL = '<%#"~/photoDB.ashx?type_img=image_bigCA&items=" + Eval("items").ToString() %>'
-                                BorderWidth="0px" Width="365px" Height="236" />
+                                BorderWidth="0px"  />
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>

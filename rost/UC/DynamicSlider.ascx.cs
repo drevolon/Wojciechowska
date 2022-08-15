@@ -95,15 +95,15 @@ select @ids";
             if (e.Item.ItemType == ListItemType.Item ||
                (e.Item.ItemType == ListItemType.AlternatingItem))
             {
-                String items = ((Label)e.Item.FindControl("LabelItemItems")).Text;
+                string items = ((Label)e.Item.FindControl("LabelItemItems")).Text;
                 string id_text = ((Label)e.Item.FindControl("LabelId_text")).Text;
                 string base_text = ((Label)e.Item.FindControl("LabelItemBase_text")).Text;
 
 
-//                if (base_text != "")
-//                {
-//                    ((HyperLink)e.Item.FindControl("HyperLinkImg")).NavigateUrl = "~/desc.aspx?id_text=" + id_text + "&items=" + items;
-//                }
+                if (base_text != "")
+                {
+                    ((HyperLink)e.Item.FindControl("HyperLinkImg")).NavigateUrl = "~/desc.aspx?id_text=" + id_text + "&items=" + items;
+                }
 
                 if (((Label)e.Item.FindControl("LabelItemHave_img")).Text == "True")
                 {

@@ -37,10 +37,12 @@ namespace rost
 
             try
             {
+                if ((Sender == string.Empty) || (Contact == string.Empty))
+                    return "Укажите \"Имя\" и \"Email/Phone\"";
 
                 var mimeMessage = new MimeMessage();
                 mimeMessage.From.Add(new MailboxAddress("home", "info@войцеховская.рф"));
-                mimeMessage.To.Add(new MailboxAddress("sender", "kigl@yandex.ru"));
+                mimeMessage.To.Add(new MailboxAddress("sender", "sbq@list.ru"));
                 mimeMessage.Subject = "Сообщение с сайта войцеховская.рф"; ;
                 var bodyBuilder = new BodyBuilder
                 {

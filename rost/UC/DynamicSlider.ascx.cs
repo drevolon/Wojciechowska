@@ -104,6 +104,11 @@ select @ids";
                 {
                     ((HyperLink)e.Item.FindControl("HyperLinkImg")).NavigateUrl = "~/desc.aspx?id_text=" + id_text + "&items=" + items;
                 }
+                else
+                {
+                    ((HyperLink)e.Item.FindControl("HyperLinkImg")).Enabled = false;
+                }
+
 
                 if (((Label)e.Item.FindControl("LabelItemHave_img")).Text == "True")
                 {

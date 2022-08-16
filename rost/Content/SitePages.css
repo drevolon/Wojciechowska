@@ -176,7 +176,8 @@ header_page .banner_menu .bg-light {
     
 }
     .desc_one .content {
-        height:640px;
+        
+        min-height: 640px;
         /*flex: 1 1 auto;*/
     }
 
@@ -184,7 +185,8 @@ header_page .banner_menu .bg-light {
     .pages {
     }
         .pages .content {
-            height:640px;
+             min-height: 640px;
+            
         }
 
         .pages .header {

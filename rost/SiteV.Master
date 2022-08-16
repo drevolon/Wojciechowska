@@ -108,7 +108,7 @@
                                 </li>
                             </ul> --%>
                         </div>
-                        <div class="pull-right fs-5 text-white"><a href="descPayLogIn.aspx"  class="nav-link"><i class="fa fa-arrow-right"></i></a></div>
+                        <%--<div class="pull-right fs-5 text-white"><a href="descPayLogIn.aspx"  class="nav-link"><i class="fa fa-arrow-right"></i></a></div>--%>
                     </div>
                 </nav>
 

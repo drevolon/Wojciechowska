@@ -2134,6 +2134,7 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.ttf" />
     <Content Include="fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\background.png" />
     <Content Include="Images\banner1old.png" />

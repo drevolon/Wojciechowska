@@ -7,34 +7,36 @@
 // </автоматически создаваемое>
 //------------------------------------------------------------------------------
 
-namespace rost.Admin {
-    
-    
-    public partial class SiteAdminEmpty {
-        
+namespace rost.Admin
+{
+
+
+    public partial class SiteAdminEmpty
+    {
+
         /// <summary>
         /// head элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-        
+
         /// <summary>
         /// MainContent элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
-        
+
         /// <summary>
         /// SqlDataSourcePagesMaster элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourcePagesMaster;
